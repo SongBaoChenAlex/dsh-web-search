@@ -1,11 +1,12 @@
 packages:
   - 'packages/*'
+# pnpm 10 uses onlyBuiltDependencies; pnpm 11 uses allowBuilds — keep both.
 onlyBuiltDependencies:
   - esbuild
+allowBuilds:
+  esbuild: true
 # DSH host packages (cordis, dsh-web, dsh-tools, …) MUST resolve from the DSH
 # install at runtime, never from a nested copy — otherwise WebError instanceof
 # checks and the cordis service registry split. Keep peers un-installed.
 autoInstallPeers: false
 verifyDepsBeforeRun: false
-allowBuilds:
-  esbuild: set this to true or false
