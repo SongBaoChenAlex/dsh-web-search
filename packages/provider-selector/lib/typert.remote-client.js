@@ -10,10 +10,10 @@
  * parameter `wire` names below MUST equal the host method parameter names in
  * `lib/service.js`.
  *
- * @module @baoson/dsh-web-provider-selector/remote
+ * @module @tobedone4byme/dsh-web-provider-selector/remote
  */
 
-const PACKAGE = "@baoson/dsh-web-provider-selector";
+const PACKAGE = "@tobedone4byme/dsh-web-provider-selector";
 const NAMESPACE = "webProviders";
 
 /**
@@ -46,7 +46,7 @@ function codec(symbol, check) {
 		nonoptional: () => schema,
 		"~standard": {
 			version: 1,
-			vendor: "@baoson/dsh-web-provider-selector",
+			vendor: "@tobedone4byme/dsh-web-provider-selector",
 			validate: (value) => {
 				const problem = check(value);
 				return problem === undefined ? { value } : { issues: [{ message: `${symbol}: ${problem}` }] };

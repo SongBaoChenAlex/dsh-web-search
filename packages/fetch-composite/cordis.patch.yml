@@ -1,10 +1,10 @@
-# @baoson/dsh-web-fetch-composite bundle patch.
+# @tobedone4byme/dsh-web-fetch-composite bundle patch.
 # Registers the chaining fetch provider (id "composite"). It only *delegates*
 # to other registered providers (default chain: readability-http then
 # tavily-extract), so those plugins must be installed as well.
 - insert:
     - id: web-fetch-composite
-      name: '@baoson/dsh-web-fetch-composite'
+      name: '@tobedone4byme/dsh-web-fetch-composite'
       config: {}
 
 # Make `web_fetch` go through the chain.

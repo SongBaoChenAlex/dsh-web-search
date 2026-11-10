@@ -11,11 +11,11 @@
  * `defineTool` comes from `@deepseek-ai/dsh-tools` and is resolved against the
  * DSH installation via `requireHost`; tests inject their own `defineTool`.
  *
- * @module @baoson/dsh-web-tavily-tools/research
+ * @module @tobedone4byme/dsh-web-tavily-tools/research
  */
 import { SessionBudget } from "./budget.js";
-import { requireHost } from "@baoson/dsh-web-shared/host";
-import { webError } from "@baoson/dsh-web-shared/http";
+import { requireHost } from "@tobedone4byme/dsh-web-shared/host";
+import { webError } from "@tobedone4byme/dsh-web-shared/http";
 
 export const WEB_RESEARCH_TOOL_NAME = "web_research";
 export const WEB_RESEARCH_SECTION_NAME = "tool:web_research";

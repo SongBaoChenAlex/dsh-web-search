@@ -1,10 +1,10 @@
-# @baoson/dsh-web-search-demo-command bundle patch.
+# @tobedone4byme/dsh-web-search-demo-command bundle patch.
 # Registers the global `/web-search-demo [query]` slash command. It performs one
 # real search through ctx.web (whatever searchProvider the `web` row selects)
 # and renders the whole pipeline as a report in the command card. Nothing is
 # sent to the model. Remove this bundle from the profile after the talk.
 - insert:
     - id: web-search-demo-command
-      name: '@baoson/dsh-web-search-demo-command'
+      name: '@tobedone4byme/dsh-web-search-demo-command'
       config:
         defaultQuery: 蓝色大肥鱼

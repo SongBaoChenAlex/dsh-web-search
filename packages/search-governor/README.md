@@ -1,4 +1,4 @@
-# @baoson/dsh-web-search-governor
+# @tobedone4byme/dsh-web-search-governor
 
 A [DeepSeek Harness](https://github.com/deepseek-ai) plugin that stops `web_search` from eating your context window. Works with **any** search provider (DSH's built-in `deepseek-official`, Tavily, Brave, …) because it only looks at the tool's result shape. It never calls the network or a model — zero added tokens.
 
@@ -16,14 +16,14 @@ Every arm is wrapped in `try/catch`: a governor bug falls through to stock behav
 ## Install & mount
 
 ```powershell
-dsh plugin --profile web add @baoson/dsh-web-search-governor   # or ./packages/search-governor
+dsh plugin --profile web add @tobedone4byme/dsh-web-search-governor   # or ./packages/search-governor
 ```
 
 The bundled `cordis.patch.yml` inserts the row with defaults. To override, add to `~/.dsh/profiles/web/cordis.patch.yml`:
 
 ```yaml
 - id: web-search-governor
-  name: '@baoson/dsh-web-search-governor'
+  name: '@tobedone4byme/dsh-web-search-governor'
   config:
     maxSources: 5
     snippetMaxChars: 300

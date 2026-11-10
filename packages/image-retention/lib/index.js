@@ -1,5 +1,5 @@
 /**
- * `@baoson/dsh-image-retention` — a DeepSeek Harness plugin that keeps only
+ * `@tobedone4byme/dsh-image-retention` — a DeepSeek Harness plugin that keeps only
  * the last `keepLast` image blocks in each outgoing model request. Every older
  * image (top-level user content and images nested inside tool-result blocks,
  * e.g. `read_image` output) is replaced with a short text placeholder.
@@ -19,10 +19,10 @@
  * `importHost` (a bare import from a plugin directory does not resolve); unit
  * tests inject `deps.llmModule` instead.
  *
- * @module @baoson/dsh-image-retention
+ * @module @tobedone4byme/dsh-image-retention
  */
 import z from "@deepseek-ai/schemastery";
-import { importHost } from "@baoson/dsh-web-shared/host";
+import { importHost } from "@tobedone4byme/dsh-web-shared/host";
 
 export const name = "image-retention";
 export const inject = ["llm"];

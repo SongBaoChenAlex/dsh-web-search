@@ -1,5 +1,5 @@
 {
-  "name": "@baoson/dsh-image-retention",
+  "name": "@tobedone4byme/dsh-image-retention",
   "version": "0.1.0",
   "description": "DeepSeek Harness plugin that keeps only the last N image blocks in each model request; older images are replaced with a short text placeholder. The session log is never modified.",
   "license": "MIT",
@@ -12,6 +12,7 @@
     "./package.json": "./package.json"
   },
   "files": [
+    "LICENSE",
     "README.md",
     "cordis.patch.yml",
     "lib/*.js"
@@ -26,7 +27,7 @@
   },
   "dependencies": {
     "@deepseek-ai/schemastery": "^3.18.1",
-    "@baoson/dsh-web-shared": "workspace:*"
+    "@tobedone4byme/dsh-web-shared": "workspace:*"
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "^4.0.1",
@@ -37,5 +38,12 @@
   },
   "engines": {
     "node": ">=22"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tobedone4byme/dsh-web-search.git",
+    "directory": "packages/image-retention"
+  },
+  "homepage": "https://github.com/tobedone4byme/dsh-web-search/tree/main/packages/image-retention#readme",
+  "bugs": "https://github.com/tobedone4byme/dsh-web-search/issues"
 }

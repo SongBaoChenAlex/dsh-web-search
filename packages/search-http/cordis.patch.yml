@@ -1,11 +1,11 @@
-# @baoson/dsh-web-search-http bundle patch.
+# @tobedone4byme/dsh-web-search-http bundle patch.
 # Registers the generic HTTP search provider with the Tavily backend. The
 # provider id equals the backend name, so this row registers `tavily`.
 # Override this row's config in the profile's cordis.patch.yml to change the
 # key reference, endpoint, result count, or Tavily request options.
 - insert:
     - id: web-search-tavily
-      name: '@baoson/dsh-web-search-http'
+      name: '@tobedone4byme/dsh-web-search-http'
       config:
         backend: tavily
         apiKeyEnv: TAVILY_API_KEY

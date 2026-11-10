@@ -1,5 +1,5 @@
 /**
- * `@baoson/dsh-web-tavily-tools` — Tavily Extract + Map + Research for the DeepSeek Harness.
+ * `@tobedone4byme/dsh-web-tavily-tools` — Tavily Extract + Map + Research for the DeepSeek Harness.
  *
  * One plugin, three registrations sharing one API key and one HTTP client:
  * - `extract.enabled`  → a `web_fetch` provider with id `tavily-extract`
@@ -8,14 +8,14 @@
  * - `research.enabled` → the `web_research` tool + its system-prompt section.
  *
  * Live overrides come from the `web-tavily-tools:` section of
- * `~/.dsh/settings.yaml` via `@baoson/dsh-web-shared/settings`.
+ * `~/.dsh/settings.yaml` via `@tobedone4byme/dsh-web-shared/settings`.
  *
- * @module @baoson/dsh-web-tavily-tools
+ * @module @tobedone4byme/dsh-web-tavily-tools
  */
 import z from "@deepseek-ai/schemastery";
-import { liveConfig } from "@baoson/dsh-web-shared/settings";
-import { apiKeyResolver } from "@baoson/dsh-web-shared/credentials";
-import { bindHost } from "@baoson/dsh-web-shared/http";
+import { liveConfig } from "@tobedone4byme/dsh-web-shared/settings";
+import { apiKeyResolver } from "@tobedone4byme/dsh-web-shared/credentials";
+import { bindHost } from "@tobedone4byme/dsh-web-shared/http";
 import { createTavilyClient, TAVILY_DEFAULT_API_KEY_ENV, TAVILY_DEFAULT_BASE_URL, DEFAULT_TIMEOUT_MS, DEFAULT_USER_AGENT } from "./tavily-client.js";
 import { TavilyExtractFetchProvider, TAVILY_EXTRACT_PROVIDER_ID, EXTRACT_DEFAULTS } from "./extract.js";
 import { applyWebMapTool, MAP_DEFAULTS, DEFAULT_MAP_BUDGET_NOTICE, SessionBudget, WEB_MAP_TOOL_NAME, WEB_MAP_SECTION_NAME } from "./map.js";

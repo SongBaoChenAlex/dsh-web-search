@@ -1,7 +1,7 @@
 import { describe, it, expect, vi } from "vitest";
 import { applyWith, Config, DEFAULT_BUDGET_NOTICE, GUIDANCE_SECTION_NAME, GUIDANCE_TEXT, inject, name, ledgerOf, nearDuplicateNotice, nearDuplicateNoteLine } from "../lib/index.js";
-import { estimateTokens } from "@baoson/dsh-web-shared/text";
-import { isVolatile, plainConfig } from "@baoson/dsh-web-shared/volatile";
+import { estimateTokens } from "@tobedone4byme/dsh-web-shared/text";
+import { isVolatile, plainConfig } from "@tobedone4byme/dsh-web-shared/volatile";
 
 /** Minimal cordis-like ctx capturing listeners. */
 function fakeCtx() {

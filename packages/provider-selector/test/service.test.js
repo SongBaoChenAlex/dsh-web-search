@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach } from "vitest";
 import { ProviderSelectorCore, defineWebProviderSelector, KNOWN_PROVIDERS, NAMESPACE, SERVICE_KEY, REMOTE_METHODS } from "../lib/service.js";
-import { catalog } from "@baoson/dsh-web-search-http/adapter";
+import { catalog } from "@tobedone4byme/dsh-web-search-http/adapter";
 
 function provider(id, available, extra = {}) {
 	return { id, available: () => available, ...extra };
@@ -324,7 +324,7 @@ describe("defineWebProviderSelector", () => {
 
 	it("keeps the client descriptor wire names in sync with the host signatures", async () => {
 		const { TYPERT_REMOTE } = await import("../lib/typert.remote-client.js");
-		expect(TYPERT_REMOTE.package).toBe("@baoson/dsh-web-provider-selector");
+		expect(TYPERT_REMOTE.package).toBe("@tobedone4byme/dsh-web-provider-selector");
 		const byMethod = Object.fromEntries(TYPERT_REMOTE.descriptors.map((d) => [d.method, d]));
 		expect(Object.keys(byMethod).sort()).toEqual([...REMOTE_METHODS].sort());
 		for (const d of TYPERT_REMOTE.descriptors) {

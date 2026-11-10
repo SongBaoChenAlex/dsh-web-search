@@ -1,4 +1,4 @@
-# @baoson/dsh-web-tavily-tools
+# @tobedone4byme/dsh-web-tavily-tools
 
 Tavily **Extract**, **Map** and **Research** for the [DeepSeek Harness](https://github.com/deepseek-ai). One cordis plugin, three registrations, one API key:
 
@@ -10,7 +10,7 @@ Tavily **Extract**, **Map** and **Research** for the [DeepSeek Harness](https://
 | `lib/tavily-client.js` | shared client | – | Auth header, timeout, abort, status → message mapping (`WEB_PROVIDER_ERROR`, `WEB_PROVIDER_CREDENTIAL_MISSING`, `WEB_ABORTED`). |
 | `lib/client-api.js` | static catalogue | `TAVILY_ENDPOINTS` | Which Tavily endpoints exist and which DSH surface implements each (for docs / the provider-selector UI). |
 
-Everything is plain ESM + JSDoc, no build step. The package depends only on `@baoson/dsh-web-shared` and `@deepseek-ai/schemastery`; the DSH host packages (`dsh-web`, `dsh-tools`, `dsh-settings`, …) are peers resolved from the DSH install.
+Everything is plain ESM + JSDoc, no build step. The package depends only on `@tobedone4byme/dsh-web-shared` and `@deepseek-ai/schemastery`; the DSH host packages (`dsh-web`, `dsh-tools`, `dsh-settings`, …) are peers resolved from the DSH install.
 
 ---
 
@@ -18,7 +18,7 @@ Everything is plain ESM + JSDoc, no build step. The package depends only on `@ba
 
 Both implement the `dsh-web` fetch-provider contract (`{ url, statusCode, body: { kind, content }, truncated }`; non-2xx is a result, not a throw). Pick per profile:
 
-| | `readability-http` (`@baoson/dsh-web-fetch-readability`) | `tavily-extract` (this package) |
+| | `readability-http` (`@tobedone4byme/dsh-web-fetch-readability`) | `tavily-extract` (this package) |
 | --- | --- | --- |
 | How | Direct HTTP GET from your machine → Readability | Tavily fetches and renders, returns Markdown |
 | JS-rendered SPAs | ✗ (sees the empty shell) | ✓ |
@@ -114,14 +114,14 @@ Settings namespace `web-tavily-tools` (hot-reloaded from `~/.dsh/settings.yaml`)
 ```powershell
 dsh plugin --profile web add ./packages/tavily-tools      # local checkout
 # or, after publish:
-dsh plugin --profile web add @baoson/dsh-web-tavily-tools
+dsh plugin --profile web add @tobedone4byme/dsh-web-tavily-tools
 ```
 
 The shipped `cordis.patch.yml` inserts one row:
 
 ```yaml
 - id: web-tavily-tools
-  name: '@baoson/dsh-web-tavily-tools'
+  name: '@tobedone4byme/dsh-web-tavily-tools'
   config:
     apiKeyEnv: TAVILY_API_KEY
 ```
@@ -153,7 +153,7 @@ Mounting this package only **registers** `tavily-extract`; `readability-http` st
     config:
       fetchProvider: tavily-extract
   ```
-- or in the Web GUI → Settings → **Web providers** (`@baoson/dsh-web-provider-selector`) → Fetch → `tavily-extract`.
+- or in the Web GUI → Settings → **Web providers** (`@tobedone4byme/dsh-web-provider-selector`) → Fetch → `tavily-extract`.
 
 `web_fetch` itself must be enabled on the `tool-web` row / your agent preset (`fetch: true`) — see the repo README.
 

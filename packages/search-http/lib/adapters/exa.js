@@ -6,9 +6,9 @@
  * rather than by keyword, and can return extracted text (`highlights`) per
  * result, which we map to `snippet`. Free tier: $10 credit on signup.
  *
- * @module @baoson/dsh-web-search-http/adapters/exa
+ * @module @tobedone4byme/dsh-web-search-http/adapters/exa
  */
-import { cleanSnippet, dedupeBy } from "@baoson/dsh-web-shared/text";
+import { cleanSnippet, dedupeBy } from "@tobedone4byme/dsh-web-shared/text";
 
 export const EXA_ID = "exa";
 export const EXA_DEFAULT_BASE_URL = "https://api.exa.ai";

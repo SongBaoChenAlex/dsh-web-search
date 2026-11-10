@@ -16,7 +16,7 @@
  * plain `import()`; when that also fails the result is `undefined` so the
  * caller decides whether to degrade or throw.
  *
- * @module @baoson/dsh-web-shared/host
+ * @module @tobedone4byme/dsh-web-shared/host
  */
 
 const cache = new Map();

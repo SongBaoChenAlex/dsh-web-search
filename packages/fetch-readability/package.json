@@ -1,5 +1,5 @@
 {
-  "name": "@baoson/dsh-web-fetch-readability",
+  "name": "@tobedone4byme/dsh-web-fetch-readability",
   "description": "DeepSeek Harness web_fetch provider (id: readability-http): SSRF-safe downloader with redirect re-validation, size/time limits, charset decoding and Mozilla Readability article extraction so the model gets the article, not the nav bar.",
   "version": "0.1.0",
   "license": "MIT",
@@ -17,6 +17,7 @@
     "./package.json": "./package.json"
   },
   "files": [
+    "LICENSE",
     "README.md",
     "cordis.patch.yml",
     "lib/*.js"
@@ -30,7 +31,7 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@baoson/dsh-web-shared": "workspace:*",
+    "@tobedone4byme/dsh-web-shared": "workspace:*",
     "@deepseek-ai/schemastery": "^3.18.1",
     "@mozilla/readability": "^0.6.0",
     "linkedom": "^0.18.15",
@@ -46,5 +47,12 @@
   },
   "engines": {
     "node": ">=22"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tobedone4byme/dsh-web-search.git",
+    "directory": "packages/fetch-readability"
+  },
+  "homepage": "https://github.com/tobedone4byme/dsh-web-search/tree/main/packages/fetch-readability#readme",
+  "bugs": "https://github.com/tobedone4byme/dsh-web-search/issues"
 }

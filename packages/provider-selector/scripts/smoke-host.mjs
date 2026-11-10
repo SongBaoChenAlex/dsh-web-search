@@ -9,7 +9,7 @@ const protocol = await load("dsh-typert-protocol/lib/index.js");
 const gatewayMod = await load("dsh-api-gateway/lib/index.js");
 const registryMod = await load("dsh-typert-registry/lib/index.js");
 const { defineWebProviderSelector, ProviderSelectorCore } = await import("../lib/service.js");
-const { catalog } = await import("@baoson/dsh-web-search-http/adapter");
+const { catalog } = await import("@tobedone4byme/dsh-web-search-http/adapter");
 
 const ctx = new Context();
 const web = {

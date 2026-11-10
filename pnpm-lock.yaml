@@ -14,10 +14,10 @@ importers:
 
   packages/demo-command:
     dependencies:
-      '@baoson/dsh-web-search-governor':
+      '@tobedone4byme/dsh-web-search-governor':
         specifier: workspace:*
         version: link:../search-governor
-      '@baoson/dsh-web-shared':
+      '@tobedone4byme/dsh-web-shared':
         specifier: workspace:*
         version: link:../shared
       '@deepseek-ai/schemastery':
@@ -26,7 +26,7 @@ importers:
 
   packages/fetch-composite:
     dependencies:
-      '@baoson/dsh-web-shared':
+      '@tobedone4byme/dsh-web-shared':
         specifier: workspace:*
         version: link:../shared
       '@deepseek-ai/schemastery':
@@ -35,7 +35,7 @@ importers:
 
   packages/fetch-readability:
     dependencies:
-      '@baoson/dsh-web-shared':
+      '@tobedone4byme/dsh-web-shared':
         specifier: workspace:*
         version: link:../shared
       '@deepseek-ai/schemastery':
@@ -53,7 +53,7 @@ importers:
 
   packages/image-retention:
     dependencies:
-      '@baoson/dsh-web-shared':
+      '@tobedone4byme/dsh-web-shared':
         specifier: workspace:*
         version: link:../shared
       '@deepseek-ai/schemastery':
@@ -62,10 +62,10 @@ importers:
 
   packages/provider-selector:
     dependencies:
-      '@baoson/dsh-web-search-http':
+      '@tobedone4byme/dsh-web-search-http':
         specifier: workspace:*
         version: link:../search-http
-      '@baoson/dsh-web-shared':
+      '@tobedone4byme/dsh-web-shared':
         specifier: workspace:*
         version: link:../shared
       '@deepseek-ai/schemastery':
@@ -78,7 +78,7 @@ importers:
 
   packages/search-governor:
     dependencies:
-      '@baoson/dsh-web-shared':
+      '@tobedone4byme/dsh-web-shared':
         specifier: workspace:*
         version: link:../shared
       '@deepseek-ai/schemastery':
@@ -91,7 +91,7 @@ importers:
 
   packages/search-http:
     dependencies:
-      '@baoson/dsh-web-shared':
+      '@tobedone4byme/dsh-web-shared':
         specifier: workspace:*
         version: link:../shared
       '@deepseek-ai/schemastery':
@@ -102,7 +102,7 @@ importers:
 
   packages/tavily-tools:
     dependencies:
-      '@baoson/dsh-web-shared':
+      '@tobedone4byme/dsh-web-shared':
         specifier: workspace:*
         version: link:../shared
       '@deepseek-ai/schemastery':

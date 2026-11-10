@@ -11,9 +11,9 @@
  * `baseURL` must point at your instance; the default `http://127.0.0.1:8080`
  * matches the docker-compose quick start.
  *
- * @module @baoson/dsh-web-search-http/adapters/searxng
+ * @module @tobedone4byme/dsh-web-search-http/adapters/searxng
  */
-import { cleanSnippet, dedupeBy } from "@baoson/dsh-web-shared/text";
+import { cleanSnippet, dedupeBy } from "@tobedone4byme/dsh-web-shared/text";
 
 export const SEARXNG_ID = "searxng";
 export const SEARXNG_DEFAULT_BASE_URL = "http://127.0.0.1:8080";

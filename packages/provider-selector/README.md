@@ -1,4 +1,4 @@
-# @baoson/dsh-web-provider-selector
+# @tobedone4byme/dsh-web-provider-selector
 
 A **"Web providers"** section in the DeepSeek Harness Web GUI settings page.
 
@@ -10,12 +10,12 @@ It lets you:
 1. **See every web provider in two compact tables** — search (`web_search`) and fetch (`web_fetch`). One row per id: `● Label  <id>  [kind]  …  status  action  ?`. Registered providers show a green dot; rows that need attention (key missing / unavailable / not mounted) are greyed.
 2. **Switch the active provider live.** Clicking *Use* assigns `ctx.web.searchProviderId` / `fetchProviderId` on the running host (the seam resolves providers at call time, so the next tool call already uses it — no restart) and persists the choice.
 3. **Add keys** inline (*Add key* expands an editor under the row). Keys go through DSH's credentials store (`$DSH_HOME/.credentials.yaml`, the same place the Models page writes `DEEPSEEK_API_KEY`), never through `settings.yaml`. Docs / key links, free tier, the key env and *Change / Remove key* live in the row's `?` menu.
-4. **Catalog backends** from `@baoson/dsh-web-search-http` (Tavily, Brave, Exa) that are not yet mounted appear as dimmed *Not mounted* rows in the same search table — never as a duplicate of a registered provider. After a key is saved the row shows the `cordis.patch.yml` snippet to add, with a copy button.
+4. **Catalog backends** from `@tobedone4byme/dsh-web-search-http` (Tavily, Brave, Exa) that are not yet mounted appear as dimmed *Not mounted* rows in the same search table — never as a duplicate of a registered provider. After a key is saved the row shows the `cordis.patch.yml` snippet to add, with a copy button.
 
 ## Install
 
 ```powershell
-pnpm --filter @baoson/dsh-web-provider-selector build:client   # produces lib/client.js
+pnpm --filter @tobedone4byme/dsh-web-provider-selector build:client   # produces lib/client.js
 dsh plugin --profile web add ./packages/provider-selector       # mounts the row from cordis.patch.yml
 ```
 
@@ -56,7 +56,7 @@ Host-side: `ctx.get("credentials")` (`@deepseek-ai/dsh-credentials` `CredentialP
 ## Development
 
 ```powershell
-pnpm --filter @baoson/dsh-web-provider-selector build:client
+pnpm --filter @tobedone4byme/dsh-web-provider-selector build:client
 node node_modules/vitest/vitest.mjs run packages/provider-selector
 node packages/provider-selector/scripts/smoke-host.mjs        # real cordis + gateway, fake ctx.web
 node packages/provider-selector/scripts/smoke-client-dom.mjs  # renders the bundle with linkedom

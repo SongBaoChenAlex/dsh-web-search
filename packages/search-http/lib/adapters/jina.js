@@ -8,9 +8,9 @@
  * `X-Respond-With: no-content` and map `description` (falling back to the first
  * 300 chars of any `content`) to `snippet`. Free tier: 10M tokens.
  *
- * @module @baoson/dsh-web-search-http/adapters/jina
+ * @module @tobedone4byme/dsh-web-search-http/adapters/jina
  */
-import { cleanSnippet, dedupeBy } from "@baoson/dsh-web-shared/text";
+import { cleanSnippet, dedupeBy } from "@tobedone4byme/dsh-web-shared/text";
 
 export const JINA_ID = "jina";
 export const JINA_DEFAULT_BASE_URL = "https://s.jina.ai";

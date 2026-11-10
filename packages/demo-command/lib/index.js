@@ -11,15 +11,15 @@
  * resolution and its `web/http-search-request` session event are exactly what a
  * model-initiated `web_search` would produce.
  *
- * @module @baoson/dsh-web-search-demo-command
+ * @module @tobedone4byme/dsh-web-search-demo-command
  */
 import z from "@deepseek-ai/schemastery";
-import { liveConfig } from "@baoson/dsh-web-shared/settings";
-import { estimateTokens } from "@baoson/dsh-web-shared/text";
-import { shapeSearchValue, resolveCaps } from "@baoson/dsh-web-search-governor/shape";
-import { tokenize, jaccard } from "@baoson/dsh-web-search-governor/similarity";
-import { normalizeQuery } from "@baoson/dsh-web-search-governor/cache";
-import { ledgerOf, Config as GovernorConfig } from "@baoson/dsh-web-search-governor";
+import { liveConfig } from "@tobedone4byme/dsh-web-shared/settings";
+import { estimateTokens } from "@tobedone4byme/dsh-web-shared/text";
+import { shapeSearchValue, resolveCaps } from "@tobedone4byme/dsh-web-search-governor/shape";
+import { tokenize, jaccard } from "@tobedone4byme/dsh-web-search-governor/similarity";
+import { normalizeQuery } from "@tobedone4byme/dsh-web-search-governor/cache";
+import { ledgerOf, Config as GovernorConfig } from "@tobedone4byme/dsh-web-search-governor";
 import { renderReport } from "./report.js";
 
 export const name = "web-search-demo-command";

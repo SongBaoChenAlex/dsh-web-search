@@ -1,7 +1,7 @@
 /**
  * Per-session call counter (same semantics as the search governor's
  * `SessionBudget`, duplicated here so this package has no dependency on it).
- * @module @baoson/dsh-web-tavily-tools/budget
+ * @module @tobedone4byme/dsh-web-tavily-tools/budget
  */
 export class SessionBudget {
 	/**

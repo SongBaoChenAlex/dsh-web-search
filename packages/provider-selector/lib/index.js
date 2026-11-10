@@ -27,12 +27,12 @@
  * Outside a DSH install (tests) the plugin degrades to "apply the row config,
  * no remote".
  *
- * @module @baoson/dsh-web-provider-selector
+ * @module @tobedone4byme/dsh-web-provider-selector
  */
-import { importHost } from "@baoson/dsh-web-shared/host";
-import { plainConfig } from "@baoson/dsh-web-shared/volatile";
+import { importHost } from "@tobedone4byme/dsh-web-shared/host";
+import { plainConfig } from "@tobedone4byme/dsh-web-shared/volatile";
 import z from "@deepseek-ai/schemastery";
-import { catalog } from "@baoson/dsh-web-search-http/adapter";
+import { catalog } from "@tobedone4byme/dsh-web-search-http/adapter";
 import { ProviderSelectorCore, defineWebProviderSelector, SERVICE_KEY, NAMESPACE, unwrapCordis } from "./service.js";
 
 export { ProviderSelectorCore, defineWebProviderSelector, SERVICE_KEY, NAMESPACE, KNOWN_PROVIDERS } from "./service.js";
@@ -49,7 +49,7 @@ export const Config = z.object({
 	fetchProvider: z.string().description("dsh 0.1.x only: active web fetch provider id. On dsh >= 0.2 set `fetchProvider` on the `web` entry instead (the Web providers page does this).").volatile(),
 });
 
-/** Host packages must be resolved against the DSH installation; see @baoson/dsh-web-shared/host. */
+/** Host packages must be resolved against the DSH installation; see @tobedone4byme/dsh-web-shared/host. */
 const tryImport = (ctx, specifier) => importHost(ctx, specifier);
 
 /** The profile entry id this fiber was mounted under; the settings forms are keyed by it. */

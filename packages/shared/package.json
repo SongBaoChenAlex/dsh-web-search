@@ -1,8 +1,7 @@
 {
-  "name": "@baoson/dsh-web-shared",
+  "name": "@tobedone4byme/dsh-web-shared",
   "version": "0.1.0",
-  "private": true,
-  "description": "Internal helpers shared by the dsh-web-search packages (not published).",
+  "description": "Internal helpers shared by the dsh-web-search packages.",
   "type": "module",
   "main": "src/index.js",
   "exports": {
@@ -33,5 +32,20 @@
     "@deepseek-ai/dsh-web": {
       "optional": true
     }
-  }
+  },
+  "license": "MIT",
+  "files": [
+    "LICENSE",
+    "src/"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tobedone4byme/dsh-web-search.git",
+    "directory": "packages/shared"
+  },
+  "homepage": "https://github.com/tobedone4byme/dsh-web-search/tree/main/packages/shared#readme",
+  "bugs": "https://github.com/tobedone4byme/dsh-web-search/issues"
 }

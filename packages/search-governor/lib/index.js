@@ -1,5 +1,5 @@
 /**
- * `@baoson/dsh-web-search-governor` — a DeepSeek Harness plugin that keeps
+ * `@tobedone4byme/dsh-web-search-governor` — a DeepSeek Harness plugin that keeps
  * `web_search` from eating the context window:
  *
  * 1. **Cache** (`tools/execute`): an identical (normalized) query in the same
@@ -33,7 +33,7 @@
  * missing/failed settings package degrades to the static mount config.
  * `applyWith(ctx, config, { installSettings })` exposes the seam explicitly.
  *
- * @module @baoson/dsh-web-search-governor
+ * @module @tobedone4byme/dsh-web-search-governor
  */
 import z from "@deepseek-ai/schemastery";
 import { shapeSearchValue, resolveCaps } from "./shape.js";
@@ -41,8 +41,8 @@ import { SessionBudget } from "./budget.js";
 import { QueryCache, normalizeQuery } from "./cache.js";
 import { QueryHistory, findNearDuplicate } from "./similarity.js";
 import { SessionLedger } from "./ledger.js";
-import { estimateTokens } from "@baoson/dsh-web-shared/text";
-import { plainConfig } from "@baoson/dsh-web-shared/volatile";
+import { estimateTokens } from "@tobedone4byme/dsh-web-shared/text";
+import { plainConfig } from "@tobedone4byme/dsh-web-shared/volatile";
 
 /** Cordis plugin name used by loader diagnostics. */
 export const name = "web-search-governor";
@@ -172,7 +172,7 @@ export function ledgerOf(sessionKey) {
 async function defaultInstallSettings(ctx, Schema, config, setSource, log) {
 	let mod;
 	try {
-		mod = await import("@baoson/dsh-web-shared/settings");
+		mod = await import("@tobedone4byme/dsh-web-shared/settings");
 	} catch (error) {
 		log.debug(`web-search-governor: settings integration unavailable (${String(error)}); using static config`);
 		return;

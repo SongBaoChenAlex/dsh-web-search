@@ -10,9 +10,12 @@
     "test:watch": "vitest",
     "smoke": "node scripts/smoke.js",
     "demo": "node scripts/demo.js",
-    "trace": "node scripts/trace-search.js"
+    "trace": "node scripts/trace-search.js",
+    "install:dsh": "pwsh scripts/install-dsh.ps1"
   },
   "devDependencies": {
     "vitest": "^3.2.4"
-  }
+  },
+  "repository": "github:tobedone4byme/dsh-web-search",
+  "license": "MIT"
 }

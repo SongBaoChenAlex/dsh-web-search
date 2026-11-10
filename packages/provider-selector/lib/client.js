@@ -1,5 +1,5 @@
 window.__ModuleLoader__.load({
-	id: "@baoson/dsh-web-provider-selector",
+	id: "@tobedone4byme/dsh-web-provider-selector",
 	factory: (require) => {
 		var module = { exports: {} };
 		var exports = module.exports;
@@ -32,7 +32,7 @@ window.__ModuleLoader__.load({
 		module.exports = __toCommonJS(index_exports);
 		
 		// lib/typert.remote-client.js
-		var PACKAGE = "@baoson/dsh-web-provider-selector";
+		var PACKAGE = "@tobedone4byme/dsh-web-provider-selector";
 		var NAMESPACE = "webProviders";
 		function codec(symbol, check) {
 		  const parse = (value) => {
@@ -53,7 +53,7 @@ window.__ModuleLoader__.load({
 		    nonoptional: () => schema,
 		    "~standard": {
 		      version: 1,
-		      vendor: "@baoson/dsh-web-provider-selector",
+		      vendor: "@tobedone4byme/dsh-web-provider-selector",
 		      validate: (value) => {
 		        const problem = check(value);
 		        return problem === void 0 ? { value } : { issues: [{ message: `${symbol}: ${problem}` }] };
@@ -213,7 +213,7 @@ window.__ModuleLoader__.load({
 		  const keyEnv = row.keyEnv ?? `${row.id.toUpperCase().replace(/[^A-Z0-9]+/gu, "_")}_API_KEY`;
 		  return [
 		    `- id: web-search-${row.id}`,
-		    `  name: "@baoson/dsh-web-search-http"`,
+		    `  name: "@tobedone4byme/dsh-web-search-http"`,
 		    `  config: { backend: ${row.id}, apiKeyEnv: ${keyEnv} }`
 		  ].join("\n");
 		}
@@ -623,7 +623,7 @@ window.__ModuleLoader__.load({
 		};
 		
 		// src/client/index.jsx
-		var PLUGIN_ID = "@baoson/dsh-web-provider-selector";
+		var PLUGIN_ID = "@tobedone4byme/dsh-web-provider-selector";
 		var REMOTE_SERVICE = "remote.webProviders";
 		var css = `
 		.${C}-section{width:100%;max-width:820px;color:var(--dsw-alias-label-primary);display:flex;flex-direction:column;gap:18px;font-size:13px;line-height:20px}

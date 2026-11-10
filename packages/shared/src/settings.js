@@ -6,7 +6,7 @@
  * outside the DSH installation, so a bare `import()` would fail). When it is
  * not resolvable at all (unit tests), `liveConfig` degrades to the static
  * config passed to `apply`.
- * @module @baoson/dsh-web-shared/settings
+ * @module @tobedone4byme/dsh-web-shared/settings
  */
 import { importHost } from "./host.js";
 

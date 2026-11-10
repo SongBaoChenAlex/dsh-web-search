@@ -1,5 +1,5 @@
 /**
- * Backend adapter contract for `@baoson/dsh-web-search-http`.
+ * Backend adapter contract for `@tobedone4byme/dsh-web-search-http`.
  *
  * An adapter is a pure, stateless description of one search API: how to build
  * the HTTP request, how to map its JSON into the `dsh-web` result vocabulary,
@@ -9,7 +9,7 @@
  *
  * Adding a backend = one new file under `adapters/` + one entry in {@link adapters}.
  *
- * @module @baoson/dsh-web-search-http/adapter
+ * @module @tobedone4byme/dsh-web-search-http/adapter
  */
 import { tavily } from "./adapters/tavily.js";
 import { brave } from "./adapters/brave.js";

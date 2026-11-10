@@ -1,5 +1,5 @@
 {
-  "name": "@baoson/dsh-web-tavily-tools",
+  "name": "@tobedone4byme/dsh-web-tavily-tools",
   "version": "0.1.0",
   "description": "Tavily Extract and Map for the DeepSeek Harness: a `tavily-extract` web_fetch provider (JS-rendered pages, PDFs, anti-bot sites) and a `web_map` tool that lists a site's URLs so the model can pick the right page before fetching.",
   "license": "MIT",
@@ -38,7 +38,7 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@baoson/dsh-web-shared": "workspace:*",
+    "@tobedone4byme/dsh-web-shared": "workspace:*",
     "@deepseek-ai/schemastery": "^3.18.1"
   },
   "peerDependencies": {
@@ -55,5 +55,12 @@
   },
   "engines": {
     "node": ">=22"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tobedone4byme/dsh-web-search.git",
+    "directory": "packages/tavily-tools"
+  },
+  "homepage": "https://github.com/tobedone4byme/dsh-web-search/tree/main/packages/tavily-tools#readme",
+  "bugs": "https://github.com/tobedone4byme/dsh-web-search/issues"
 }

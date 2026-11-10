@@ -7,9 +7,9 @@
  * When Google shows an answer box we surface its text as the result `content`.
  * Free tier: 2,500 queries one-time; the free plan caps `num` at 10.
  *
- * @module @baoson/dsh-web-search-http/adapters/serper
+ * @module @tobedone4byme/dsh-web-search-http/adapters/serper
  */
-import { cleanSnippet, dedupeBy } from "@baoson/dsh-web-shared/text";
+import { cleanSnippet, dedupeBy } from "@tobedone4byme/dsh-web-shared/text";
 
 export const SERPER_ID = "serper";
 export const SERPER_DEFAULT_BASE_URL = "https://google.serper.dev";

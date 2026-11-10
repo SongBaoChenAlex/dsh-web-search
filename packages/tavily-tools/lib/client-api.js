@@ -2,7 +2,7 @@
  * Static catalogue of Tavily API endpoints and how this monorepo maps them to
  * DSH surfaces. Consumed by docs and the provider-selector UI; no runtime
  * behaviour depends on it.
- * @module @baoson/dsh-web-tavily-tools/client-api
+ * @module @tobedone4byme/dsh-web-tavily-tools/client-api
  */
 
 /**
@@ -23,8 +23,8 @@ export const TAVILY_ENDPOINTS = Object.freeze([
 		path: "/search",
 		summary: "LLM-native web search: ranked results with extracted passages and an optional synthesized answer.",
 		costNote: "1 credit per basic search, 2 per advanced.",
-		tokenNote: "Medium: answer + N snippets; governed by @baoson/dsh-web-search-governor.",
-		implementedBy: "@baoson/dsh-web-search-http",
+		tokenNote: "Medium: answer + N snippets; governed by @tobedone4byme/dsh-web-search-governor.",
+		implementedBy: "@tobedone4byme/dsh-web-search-http",
 	},
 	{
 		id: "extract",
@@ -32,7 +32,7 @@ export const TAVILY_ENDPOINTS = Object.freeze([
 		summary: "Fetch and clean one or more URLs (JS-rendered pages, PDFs) into Markdown or text.",
 		costNote: "1 credit per 5 URLs at basic depth, 2 per 5 at advanced.",
 		tokenNote: "High per call (full page); capped at maxOutputChars (default 20 000 chars).",
-		implementedBy: "@baoson/dsh-web-tavily-tools (fetch provider tavily-extract)",
+		implementedBy: "@tobedone4byme/dsh-web-tavily-tools (fetch provider tavily-extract)",
 	},
 	{
 		id: "map",

@@ -12,12 +12,12 @@
  * a DSH install. Codes used: `WEB_PROVIDER_ERROR`,
  * `WEB_PROVIDER_CREDENTIAL_MISSING`, `WEB_ABORTED`.
  *
- * @module @baoson/dsh-web-search-http
+ * @module @tobedone4byme/dsh-web-search-http
  */
 import z from "@deepseek-ai/schemastery";
-import { liveConfig } from "@baoson/dsh-web-shared/settings";
-import { apiKeyResolver } from "@baoson/dsh-web-shared/credentials";
-import { fetchWithTimeout, abortable, isAbortError, webError, bindHost } from "@baoson/dsh-web-shared/http";
+import { liveConfig } from "@tobedone4byme/dsh-web-shared/settings";
+import { apiKeyResolver } from "@tobedone4byme/dsh-web-shared/credentials";
+import { fetchWithTimeout, abortable, isAbortError, webError, bindHost } from "@tobedone4byme/dsh-web-shared/http";
 import { getAdapter, adapters } from "./adapter.js";
 import { TAVILY_DEFAULTS, TAVILY_ID } from "./adapters/tavily.js";
 import { BRAVE_DEFAULTS, BRAVE_ID } from "./adapters/brave.js";

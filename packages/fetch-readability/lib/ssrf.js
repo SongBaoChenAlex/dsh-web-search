@@ -3,7 +3,7 @@
  * `assertSafeUrl` that resolves DNS (injectable for tests) and refuses any
  * target that lands on a private, loopback, link-local or otherwise
  * non-public address.
- * @module @baoson/dsh-web-fetch-readability/ssrf
+ * @module @tobedone4byme/dsh-web-fetch-readability/ssrf
  */
 import dns from "node:dns/promises";
 import { BlockList, isIP } from "node:net";

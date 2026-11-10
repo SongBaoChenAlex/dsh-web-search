@@ -1,5 +1,5 @@
 {
-  "name": "@baoson/dsh-web-provider-selector",
+  "name": "@tobedone4byme/dsh-web-provider-selector",
   "version": "0.1.0",
   "description": "DeepSeek Harness Web GUI settings section \"Web providers\": lists every registered web search / fetch provider, switches the active one live (persisted in settings.yaml), and stores API keys for curated search backends through the DSH credentials store.",
   "license": "MIT",
@@ -15,6 +15,7 @@
     "./package.json": "./package.json"
   },
   "files": [
+    "LICENSE",
     "README.md",
     "cordis.patch.yml",
     "lib/*.js"
@@ -45,8 +46,8 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@baoson/dsh-web-search-http": "workspace:*",
-    "@baoson/dsh-web-shared": "workspace:*",
+    "@tobedone4byme/dsh-web-search-http": "workspace:*",
+    "@tobedone4byme/dsh-web-shared": "workspace:*",
     "@deepseek-ai/schemastery": "^3.18.1"
   },
   "devDependencies": {
@@ -64,5 +65,12 @@
   },
   "engines": {
     "node": ">=22"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tobedone4byme/dsh-web-search.git",
+    "directory": "packages/provider-selector"
+  },
+  "homepage": "https://github.com/tobedone4byme/dsh-web-search/tree/main/packages/provider-selector#readme",
+  "bugs": "https://github.com/tobedone4byme/dsh-web-search/issues"
 }

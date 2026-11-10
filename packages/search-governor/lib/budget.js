@@ -1,6 +1,6 @@
 /**
  * Per-session call counter with an LRU bound on the number of tracked sessions.
- * @module @baoson/dsh-web-search-governor/budget
+ * @module @tobedone4byme/dsh-web-search-governor/budget
  */
 
 export class SessionBudget {

@@ -51,7 +51,7 @@ const fakeCtx = {
 	slots: { inject: (_s, fn) => fn(), register: (decl, Component) => { registered.push({ decl, Component }); } },
 };
 await mod.apply(fakeCtx);
-console.log("style injected:", document.querySelector('style[data-plugin="@baoson/dsh-web-provider-selector"]') !== null);
+console.log("style injected:", document.querySelector('style[data-plugin="@tobedone4byme/dsh-web-provider-selector"]') !== null);
 const { decl, Component } = registered[0];
 const root = createRoot(document.getElementById("root"));
 await act(async () => { root.render(React.createElement(Component, decl.inject())); });

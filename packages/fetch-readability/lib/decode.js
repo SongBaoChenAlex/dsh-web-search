@@ -1,7 +1,7 @@
 /**
  * Bytes → string with charset detection: Content-Type header → BOM →
  * `<meta charset>` / `http-equiv` sniff (first 2 KB) → UTF-8.
- * @module @baoson/dsh-web-fetch-readability/decode
+ * @module @tobedone4byme/dsh-web-fetch-readability/decode
  */
 
 const SNIFF_BYTES = 2048;

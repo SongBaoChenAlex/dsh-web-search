@@ -6,7 +6,7 @@
  * Mirrors the Host `Config` schema in `lib/index.js` field by field; the Host
  * stays the authority (its schemastery validation rejects anything the client
  * let through), the client only pre-checks what it can.
- * @module @baoson/dsh-web-search-governor/client/form
+ * @module @tobedone4byme/dsh-web-search-governor/client/form
  */
 
 /** Settings namespace this page edits (= `SETTINGS_NAMESPACE` on the host). */

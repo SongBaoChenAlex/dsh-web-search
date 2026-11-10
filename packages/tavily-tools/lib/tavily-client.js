@@ -2,7 +2,7 @@
  * Minimal Tavily HTTP client shared by the `tavily-extract` fetch provider and
  * the `web_map` tool. One place for: the `Authorization: Bearer` header,
  * `fetchWithTimeout`, HTTP-status → message mapping (same wording as the
- * search adapter in `@baoson/dsh-web-search-http`), and abort / timeout →
+ * search adapter in `@tobedone4byme/dsh-web-search-http`), and abort / timeout →
  * `WebError` code mapping.
  *
  * Endpoints (https://docs.tavily.com/documentation/api-reference/endpoint/extract, …/map):
@@ -18,9 +18,9 @@
  * Error codes: `WEB_PROVIDER_ERROR` (HTTP / network / timeout),
  * `WEB_PROVIDER_CREDENTIAL_MISSING`, `WEB_ABORTED` (caller abort).
  *
- * @module @baoson/dsh-web-tavily-tools/tavily-client
+ * @module @tobedone4byme/dsh-web-tavily-tools/tavily-client
  */
-import { fetchWithTimeout, abortable, isAbortError, webError } from "@baoson/dsh-web-shared/http";
+import { fetchWithTimeout, abortable, isAbortError, webError } from "@tobedone4byme/dsh-web-shared/http";
 
 export const TAVILY_DEFAULT_BASE_URL = "https://api.tavily.com";
 export const TAVILY_DEFAULT_API_KEY_ENV = "TAVILY_API_KEY";
