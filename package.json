@@ -16,6 +16,6 @@
   "devDependencies": {
     "vitest": "^3.2.4"
   },
-  "repository": "github:tobedone4byme/dsh-web-search",
+  "repository": "github:SongBaoChenAlex/dsh-web-search",
   "license": "MIT"
 }

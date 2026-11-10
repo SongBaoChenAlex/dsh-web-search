@@ -41,9 +41,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tobedone4byme/dsh-web-search.git",
+    "url": "git+https://github.com/SongBaoChenAlex/dsh-web-search.git",
     "directory": "packages/image-retention"
   },
-  "homepage": "https://github.com/tobedone4byme/dsh-web-search/tree/main/packages/image-retention#readme",
-  "bugs": "https://github.com/tobedone4byme/dsh-web-search/issues"
+  "homepage": "https://github.com/SongBaoChenAlex/dsh-web-search/tree/main/packages/image-retention#readme",
+  "bugs": "https://github.com/SongBaoChenAlex/dsh-web-search/issues"
 }

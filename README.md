@@ -402,7 +402,7 @@ Nothing in this repo adds tokens. Every stage only removes or caps.
 ### Option A — one command (recommended)
 
 ```powershell
-git clone https://github.com/tobedone4byme/dsh-web-search
+git clone https://github.com/SongBaoChenAlex/dsh-web-search
 cd dsh-web-search
 pwsh scripts/install-dsh.ps1          # Windows / PowerShell
 # or
@@ -425,7 +425,7 @@ Then restart DSH and open **Settings → Web providers** in the Web GUI to enter
 ### Option B — pick packages by hand
 
 ```powershell
-git clone https://github.com/tobedone4byme/dsh-web-search
+git clone https://github.com/SongBaoChenAlex/dsh-web-search
 cd dsh-web-search
 pnpm install
 
