@@ -103,7 +103,7 @@ sequenceDiagram
         H-->>A: result
     end
     A->>G: tools/post-execute(exec, result)
-    G->>G: shape value: dedupe URLs, strip utm_*,<br/>snippet ≤ 300 chars, content ≤ 1500, ≤ 5 sources;<br/>prepend near-duplicate note (mode "notice");<br/>ledger += raw/shaped tokens, one log line
+    G->>G: shape value: dedupe URLs, strip utm_*,<br/>snippet ≤ 300 chars, content ≤ 1500, ≤ 5 sources<br/>prepend near-duplicate note (mode "notice")<br/>ledger += raw/shaped tokens, one log line
     G-->>A: { kind:'accept', value } → re-rendered by the tool's own render()
     A-->>M: tool_result (compact text) appended to context
 ```
@@ -167,7 +167,7 @@ sequenceDiagram
     alt thrown error | status ∈ {403,429,451,500,502,503} | visible text < 400 chars
         C->>X: 2nd: tavily-extract.fetch(req, signal)
         X-->>C: Markdown body (kind:'text')
-        C->>C: prepend one line:<br/><!-- fetched via tavily-extract after readability-http returned thin content (12 chars) -->
+        C->>C: prepend one HTML comment line:<br/>"fetched via tavily-extract after readability-http returned thin content (12 chars)"
     else good result
         C->>C: pass through unchanged
     end
