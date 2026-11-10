@@ -23,9 +23,11 @@ Requires Node ≥ 22, [pnpm](https://pnpm.io/installation) and `dsh` on your PAT
 ```powershell
 git clone https://github.com/SongBaoChenAlex/dsh-web-search
 cd dsh-web-search
-pwsh scripts/install-dsh.ps1        # Windows
+scripts\install-dsh.cmd             # Windows (double-click works too)
 bash scripts/install-dsh.sh         # macOS / Linux
 ```
+
+> Downloaded a ZIP instead of cloning? Same thing — unzip, then run scripts\install-dsh.cmd. (Running install-dsh.ps1 directly may fail with *"not digitally signed"* because Windows marks downloaded files; the .cmd wrapper bypasses that for this run only, or use powershell -ExecutionPolicy Bypass -File scripts\install-dsh.ps1.)
 
 The script runs `pnpm install` and mounts the recommended set (governor, search-http, fetch-readability, tavily-tools, fetch-composite, provider-selector) into the `web` profile. Then restart DSH and enter your search API key under **Settings → Web providers** in the Web GUI.
 
@@ -422,7 +424,7 @@ Nothing in this repo adds tokens. Every stage only removes or caps.
 ```powershell
 git clone https://github.com/SongBaoChenAlex/dsh-web-search
 cd dsh-web-search
-pwsh scripts/install-dsh.ps1          # Windows / PowerShell
+scripts\install-dsh.cmd               # Windows (wrapper: bypasses execution policy, works with PowerShell 5.1 or 7)
 # or
 bash scripts/install-dsh.sh           # macOS / Linux
 ```

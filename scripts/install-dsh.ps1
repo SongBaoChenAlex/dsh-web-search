@@ -13,7 +13,12 @@
   Package directory names under ./packages to install. Default: the recommended set.
   Use -All to install every package.
 
+.NOTES
+  If PowerShell refuses to run this file ("not digitally signed" — typical after Download ZIP), either run
+  scripts\install-dsh.cmd instead, or: powershell -ExecutionPolicy Bypass -File scripts\install-dsh.ps1
+
 .EXAMPLE
+  scripts\install-dsh.cmd
   pwsh scripts/install-dsh.ps1
   pwsh scripts/install-dsh.ps1 -All
   pwsh scripts/install-dsh.ps1 -Profile cli -Packages search-governor,search-http
@@ -51,7 +56,7 @@ if (-not $SkipInstall) {
 
 $ok = @(); $failed = @()
 foreach ($name in $Packages) {
-  $dir = Join-Path $root "packages" $name
+  $dir = Join-Path (Join-Path $root "packages") $name
   if (-not (Test-Path (Join-Path $dir "package.json"))) { Write-Warning "skip '$name': no such package"; continue }
   Write-Host "==> dsh plugin --profile $Profile add ./packages/$name" -ForegroundColor Cyan
   & dsh plugin --profile $Profile add "./packages/$name"
