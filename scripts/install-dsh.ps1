@@ -7,8 +7,7 @@
   for every selected package. Re-running is safe: already-mounted plugins are reported and skipped.
 
 .PARAMETER Profile
-  DSH profile name (the directory under $DSH_HOME/profiles, default ~/.dsh/profiles). When omitted: uses the only
-  existing profile, or lets you pick one when there are several.
+  DSH profile name (a directory under $DSH_HOME/profiles, default ~/.dsh/profiles). Asked interactively when omitted.
 
 .PARAMETER Packages
   Package directory names under ./packages to install. Default: the recommended set.
@@ -42,34 +41,16 @@ foreach ($tool in "pnpm", "dsh") {
   }
 }
 
-# --- Pick the DSH profile: -Profile > the only existing profile > interactive choice > typed name ---
+# --- Profile: use -Profile if given, otherwise ask ---
 if (-not $Profile) {
   $dshHome = if ($env:DSH_HOME) { $env:DSH_HOME } else { Join-Path $HOME ".dsh" }
   $profilesDir = Join-Path $dshHome "profiles"
-  $existing = @()
   if (Test-Path $profilesDir) {
-    $existing = @(Get-ChildItem $profilesDir -Directory |
-      Where-Object { $_.Name -ne "node_modules" -and $_.Name -ne "desktop" -and (Test-Path (Join-Path $_.FullName "package.json")) } |
-      Select-Object -ExpandProperty Name)
+    $existing = @(Get-ChildItem $profilesDir -Directory | Where-Object { $_.Name -ne "node_modules" } | Select-Object -ExpandProperty Name)
+    if ($existing.Count) { Write-Host "Existing DSH profiles in ${profilesDir}: $($existing -join ', ')" -ForegroundColor Yellow }
   }
-  if ($existing.Count -eq 1) {
-    $Profile = $existing[0]
-    Write-Host "Using the only DSH profile found: $Profile  ($profilesDir)" -ForegroundColor Yellow
-  } elseif ($existing.Count -gt 1) {
-    Write-Host "DSH profiles found in ${profilesDir}:" -ForegroundColor Yellow
-    for ($i = 0; $i -lt $existing.Count; $i++) { Write-Host ("  [{0}] {1}" -f ($i + 1), $existing[$i]) }
-    $default = if ($existing -contains "web") { "web" } else { $existing[0] }
-    $answer = Read-Host "Install into which profile? (number or name, Enter = $default)"
-    if (-not $answer) { $Profile = $default }
-    elseif ($answer -match '^\d+$' -and [int]$answer -ge 1 -and [int]$answer -le $existing.Count) { $Profile = $existing[[int]$answer - 1] }
-    else { $Profile = $answer }
-  } else {
-    Write-Host "No DSH profile found under $profilesDir." -ForegroundColor Yellow
-    $answer = Read-Host "Profile name to create/use (Enter = web)"
-    $Profile = if ($answer) { $answer } else { "web" }
-  }
-}
-if ($Profile -ieq "desktop") { throw "profile 'desktop' is managed by the DSH Electron app; pick another profile" }
+  while (-not $Profile) { $Profile = (Read-Host "Enter the DSH profile name to install into (e.g. web)").Trim() }
+}if ($Profile -ieq "desktop") { throw "profile 'desktop' is managed by the DSH Electron app; pick another profile" }
 Write-Host "Target profile: $Profile" -ForegroundColor Cyan
 
 if ($All) {

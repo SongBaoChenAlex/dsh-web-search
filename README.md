@@ -29,7 +29,7 @@ bash scripts/install-dsh.sh         # macOS / Linux
 
 > Downloaded a ZIP instead of cloning? Same thing — unzip, then run scripts\install-dsh.cmd. (Running install-dsh.ps1 directly may fail with *"not digitally signed"* because Windows marks downloaded files; the .cmd wrapper bypasses that for this run only, or use powershell -ExecutionPolicy Bypass -File scripts\install-dsh.ps1.)
 
-The script runs `pnpm install`, then mounts the recommended set (governor, search-http, fetch-readability, tavily-tools, fetch-composite, provider-selector) into your DSH profile — it uses the only profile under `~/.dsh/profiles` (or `/profiles`) if there is one, and asks you to pick when there are several. Then restart DSH and enter your search API key under **Settings → Web providers** in the Web GUI.
+The script runs `pnpm install`, then mounts the recommended set (governor, search-http, fetch-readability, tavily-tools, fetch-composite, provider-selector) into the DSH profile you name — the script asks for it (and lists the profiles found under `~/.dsh/profiles`). Then restart DSH and enter your search API key under **Settings → Web providers** in the Web GUI.
 
 - `-Profile <name>` / `--profile <name>` skips the prompt; `-All` / `--all` installs every package.
 - Update later with `git pull && pnpm install` — plugins are path-linked, nothing to re-add.
@@ -429,7 +429,7 @@ scripts\install-dsh.cmd               # Windows (wrapper: bypasses execution pol
 bash scripts/install-dsh.sh           # macOS / Linux
 ```
 
-This runs `pnpm install` and mounts the recommended set — governor, search-http, fetch-readability, tavily-tools, fetch-composite, provider-selector — into a DSH profile (auto-detected when there is exactly one; otherwise you pick from a list). Options:
+This runs `pnpm install` and mounts the recommended set — governor, search-http, fetch-readability, tavily-tools, fetch-composite, provider-selector — into the DSH profile you type in at the prompt. Options:
 
 | Flag | Effect |
 | --- | --- |

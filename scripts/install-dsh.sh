@@ -2,7 +2,7 @@
 # Install the dsh-web-search plugins into a DeepSeek Harness (DSH) profile from this checkout.
 #
 # Usage:
-#   scripts/install-dsh.sh                       # recommended set; picks/asks for the DSH profile
+#   scripts/install-dsh.sh                       # recommended set; asks for the DSH profile name
 #   scripts/install-dsh.sh --all                 # every package
 #   scripts/install-dsh.sh --profile cli search-governor search-http
 #   SKIP_INSTALL=1 scripts/install-dsh.sh        # skip `pnpm install` (e.g. after git pull)
@@ -27,35 +27,14 @@ for tool in pnpm dsh; do
   command -v "$tool" >/dev/null 2>&1 || { echo "error: '$tool' not found on PATH (pnpm: https://pnpm.io/installation, dsh: npm i -g @deepseek-ai/dsh)" >&2; exit 1; }
 done
 
-# --- Pick the DSH profile: --profile > the only existing profile > interactive choice > typed name ---
+# --- Profile: use --profile if given, otherwise ask ---
 if [[ -z "$profile" ]]; then
-  dsh_home="${DSH_HOME:-$HOME/.dsh}"
-  profiles_dir="$dsh_home/profiles"
-  existing=()
+  profiles_dir="${DSH_HOME:-$HOME/.dsh}/profiles"
   if [[ -d "$profiles_dir" ]]; then
-    for d in "$profiles_dir"/*/; do
-      [[ -d "$d" ]] || continue
-      name="$(basename "$d")"
-      [[ "$name" == "node_modules" || "$name" == "desktop" ]] && continue
-      [[ -f "$d/package.json" ]] && existing+=("$name")
-    done
+    existing=$(ls -1 "$profiles_dir" 2>/dev/null | grep -v '^node_modules$' | paste -sd ', ' -)
+    [[ -n "$existing" ]] && echo "Existing DSH profiles in $profiles_dir: $existing"
   fi
-  if [[ ${#existing[@]} -eq 1 ]]; then
-    profile="${existing[0]}"
-    echo "Using the only DSH profile found: $profile  ($profiles_dir)"
-  elif [[ ${#existing[@]} -gt 1 ]]; then
-    echo "DSH profiles found in $profiles_dir:"
-    for i in "${!existing[@]}"; do printf '  [%d] %s\n' "$((i+1))" "${existing[$i]}"; done
-    default="${existing[0]}"; for e in "${existing[@]}"; do [[ "$e" == "web" ]] && default="web"; done
-    read -r -p "Install into which profile? (number or name, Enter = $default) " answer
-    if [[ -z "$answer" ]]; then profile="$default"
-    elif [[ "$answer" =~ ^[0-9]+$ && "$answer" -ge 1 && "$answer" -le ${#existing[@]} ]]; then profile="${existing[$((answer-1))]}"
-    else profile="$answer"; fi
-  else
-    echo "No DSH profile found under $profiles_dir."
-    read -r -p "Profile name to create/use (Enter = web) " answer
-    profile="${answer:-web}"
-  fi
+  while [[ -z "$profile" ]]; do read -r -p "Enter the DSH profile name to install into (e.g. web): " profile; done
 fi
 [[ "${profile,,}" == "desktop" ]] && { echo "error: profile 'desktop' is managed by the DSH Electron app; pick another profile" >&2; exit 1; }
 echo "Target profile: $profile"
