@@ -1,4 +1,4 @@
-# @tobedone4byme/dsh-web-fetch-readability
+# @baoson/dsh-web-fetch-readability
 
 A [DeepSeek Harness (DSH)](https://github.com/deepseek-ai) plugin that registers a **fetch provider** (id `readability-http`) for DSH's built-in `web_fetch` tool.
 
@@ -67,14 +67,14 @@ Supported charsets: whatever Node's ICU `TextDecoder` knows — UTF-8/16, GBK/GB
 ## Install and mount
 
 ```powershell
-dsh plugin --profile web add @tobedone4byme/dsh-web-fetch-readability   # or ./packages/fetch-readability
+dsh plugin --profile web add @baoson/dsh-web-fetch-readability   # or ./packages/fetch-readability
 ```
 
 The package ships a bundle patch (`cordis.patch.yml`) that inserts the provider row and sets the web seam's `fetchProvider: readability-http`. To tune it, add to `~/.dsh/profiles/web/cordis.patch.yml`:
 
 ```yaml
 - id: web-fetch-readability
-  name: '@tobedone4byme/dsh-web-fetch-readability'
+  name: '@baoson/dsh-web-fetch-readability'
   config:
     maxOutputChars: 20000
     timeoutMs: 20000

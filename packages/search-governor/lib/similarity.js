@@ -1,7 +1,7 @@
 /**
  * Pure near-duplicate query detection: tokenize → light stem → Jaccard.
  * No I/O, no DSH imports.
- * @module @tobedone4byme/dsh-web-search-governor/similarity
+ * @module @baoson/dsh-web-search-governor/similarity
  */
 
 /** Small English stop-word list; single-character tokens are dropped separately. */

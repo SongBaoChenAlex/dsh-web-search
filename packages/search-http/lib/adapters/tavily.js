@@ -7,9 +7,9 @@
  * `answer → content`, `results[].content → snippet`, `published_date → publishedAt`.
  * Relevance `score` and `raw_content` are dropped (`raw_content` is `web_fetch`'s job).
  *
- * @module @tobedone4byme/dsh-web-search-http/adapters/tavily
+ * @module @baoson/dsh-web-search-http/adapters/tavily
  */
-import { cleanSnippet, dedupeBy } from "@tobedone4byme/dsh-web-shared/text";
+import { cleanSnippet, dedupeBy } from "@baoson/dsh-web-shared/text";
 
 export const TAVILY_ID = "tavily";
 export const TAVILY_DEFAULT_BASE_URL = "https://api.tavily.com";

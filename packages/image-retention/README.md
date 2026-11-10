@@ -1,4 +1,4 @@
-# @tobedone4byme/dsh-image-retention
+# @baoson/dsh-image-retention
 
 DeepSeek Harness plugin: keep only the **last N images** in each model request.
 Older images (pasted into the chat, or produced by `read_image` inside a tool

@@ -1,5 +1,5 @@
 {
-  "name": "@tobedone4byme/dsh-web-shared",
+  "name": "@baoson/dsh-web-shared",
   "version": "0.1.0",
   "description": "Internal helpers shared by the dsh-web-search packages.",
   "type": "module",

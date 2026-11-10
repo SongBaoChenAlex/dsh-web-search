@@ -7,3 +7,5 @@ onlyBuiltDependencies:
 # checks and the cordis service registry split. Keep peers un-installed.
 autoInstallPeers: false
 verifyDepsBeforeRun: false
+allowBuilds:
+  esbuild: set this to true or false

@@ -1,4 +1,4 @@
-# @tobedone4byme/dsh-web-provider-selector bundle patch.
+# @baoson/dsh-web-provider-selector bundle patch.
 # Mounts the host half (settings persistence + `webProviders` remote) and,
 # because the package declares `dsh.client`, makes the Web GUI serve its
 # browser bundle as a "Web providers" settings section.
@@ -9,5 +9,5 @@
 # `web-provider-selector:` and wins over this base layer).
 - insert:
     - id: web-provider-selector
-      name: '@tobedone4byme/dsh-web-provider-selector'
+      name: '@baoson/dsh-web-provider-selector'
       config: {}

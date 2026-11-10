@@ -1,6 +1,6 @@
 /**
  * Bundle `src/client/index.jsx` into `lib/client.js` in the DSH client-plugin
- * module format (same recipe as `@tobedone4byme/dsh-web-provider-selector`):
+ * module format (same recipe as `@baoson/dsh-web-provider-selector`):
  *
  *   window.__ModuleLoader__.load({ id, factory: (require) => { ...CJS...; return module.exports; } })
  *

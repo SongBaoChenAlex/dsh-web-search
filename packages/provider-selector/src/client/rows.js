@@ -172,7 +172,7 @@ export function mountSnippet(row) {
 	const keyEnv = row.keyEnv ?? `${row.id.toUpperCase().replace(/[^A-Z0-9]+/gu, "_")}_API_KEY`;
 	return [
 		`- id: web-search-${row.id}`,
-		`  name: "@tobedone4byme/dsh-web-search-http"`,
+		`  name: "@baoson/dsh-web-search-http"`,
 		`  config: { backend: ${row.id}, apiKeyEnv: ${keyEnv} }`,
 	].join("\n");
 }

@@ -1,5 +1,5 @@
 {
-  "name": "@tobedone4byme/dsh-web-provider-selector",
+  "name": "@baoson/dsh-web-provider-selector",
   "version": "0.1.0",
   "description": "DeepSeek Harness Web GUI settings section \"Web providers\": lists every registered web search / fetch provider, switches the active one live (persisted in settings.yaml), and stores API keys for curated search backends through the DSH credentials store.",
   "license": "MIT",
@@ -46,8 +46,8 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@tobedone4byme/dsh-web-search-http": "workspace:*",
-    "@tobedone4byme/dsh-web-shared": "workspace:*",
+    "@baoson/dsh-web-search-http": "workspace:*",
+    "@baoson/dsh-web-shared": "workspace:*",
     "@deepseek-ai/schemastery": "^3.18.1"
   },
   "devDependencies": {

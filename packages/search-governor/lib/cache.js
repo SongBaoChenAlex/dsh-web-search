@@ -1,6 +1,6 @@
 /**
  * Per-session query → result cache with TTL and per-session size cap.
- * @module @tobedone4byme/dsh-web-search-governor/cache
+ * @module @baoson/dsh-web-search-governor/cache
  */
 
 /**

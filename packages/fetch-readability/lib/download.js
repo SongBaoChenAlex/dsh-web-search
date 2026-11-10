@@ -1,9 +1,9 @@
 /**
  * Bounded downloader: manual redirect loop with per-hop SSRF re-validation,
  * timeout, and a streamed byte cap.
- * @module @tobedone4byme/dsh-web-fetch-readability/download
+ * @module @baoson/dsh-web-fetch-readability/download
  */
-import { fetchWithTimeout, isAbortError, throwIfAborted } from "@tobedone4byme/dsh-web-shared/http";
+import { fetchWithTimeout, isAbortError, throwIfAborted } from "@baoson/dsh-web-shared/http";
 import { assertSafeUrl } from "./ssrf.js";
 
 export const DEFAULT_ACCEPT = "text/html,application/xhtml+xml,application/xml;q=0.9,text/*;q=0.8,application/json;q=0.8,*/*;q=0.5";

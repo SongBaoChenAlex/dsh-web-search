@@ -14,9 +14,9 @@
  *   namespace `webProviders`) whose `@Remote` methods delegate to the core.
  *   Decorators are applied manually because this is plain JS.
  *
- * @module @tobedone4byme/dsh-web-provider-selector/service
+ * @module @baoson/dsh-web-provider-selector/service
  */
-import { isVolatile } from "@tobedone4byme/dsh-web-shared/volatile";
+import { isVolatile } from "@baoson/dsh-web-shared/volatile";
 
 /** Cordis service key the host service is registered under. */
 export const SERVICE_KEY = "webProviderSelector";
@@ -211,7 +211,7 @@ export class ProviderSelectorCore {
 	/** Best-effort key reference for a registered provider instance. */
 	keyEnvOf(provider, catalogEntry) {
 		try {
-			// `@tobedone4byme/dsh-web-search-http` providers expose their resolved options.
+			// `@baoson/dsh-web-search-http` providers expose their resolved options.
 			if (typeof provider.resolveOptions === "function") {
 				const env = provider.resolveOptions()?.apiKeyEnv;
 				if (typeof env === "string" && env.length > 0) return env;

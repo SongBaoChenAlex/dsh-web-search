@@ -1,4 +1,4 @@
-# @tobedone4byme/dsh-web-search-http
+# @baoson/dsh-web-search-http
 
 Generic HTTP web-search provider for the [DeepSeek Harness](https://github.com/deepseek-ai) web seam (`ctx.web`). One plugin, pluggable backends: **Tavily** (default), **Brave**, **Exa**, **Serper**, **Jina Search** and self-hosted **SearXNG**. Tavily is an LLM-native search API that returns a synthesized answer plus an extracted passage per result, so the model usually needs far fewer `web_fetch` follow-ups than with a classic snippet API.
 
@@ -31,14 +31,14 @@ Each request is recorded on the initiating session as `web/http-search-request` 
 ## Install
 
 ```powershell
-dsh plugin --profile web add @tobedone4byme/dsh-web-search-http      # or ./packages/search-http from a checkout
+dsh plugin --profile web add @baoson/dsh-web-search-http      # or ./packages/search-http from a checkout
 ```
 
 The package's bundle patch (`cordis.patch.yml`) mounts one row:
 
 ```yaml
 - id: web-search-tavily
-  name: '@tobedone4byme/dsh-web-search-http'
+  name: '@baoson/dsh-web-search-http'
   config:
     backend: tavily
     apiKeyEnv: TAVILY_API_KEY
@@ -111,19 +111,19 @@ Example `cordis.patch.yml` rows (one row per backend you want; each registers a 
 
 ```yaml
 - id: web-search-serper
-  name: '@tobedone4byme/dsh-web-search-http'
+  name: '@baoson/dsh-web-search-http'
   config:
     backend: serper
     apiKeyEnv: SERPER_API_KEY
 
 - id: web-search-jina
-  name: '@tobedone4byme/dsh-web-search-http'
+  name: '@baoson/dsh-web-search-http'
   config:
     backend: jina
     apiKeyEnv: JINA_API_KEY
 
 - id: web-search-searxng
-  name: '@tobedone4byme/dsh-web-search-http'
+  name: '@baoson/dsh-web-search-http'
   config:
     backend: searxng
     baseURL: http://127.0.0.1:8080   # your instance; required unless it really runs on localhost:8080
@@ -152,4 +152,4 @@ node node_modules/vitest/vitest.mjs run packages/search-http
 
 Tests never hit the real network: a local `http.createServer` plays Tavily through `baseURL`.
 
-Plain ESM JavaScript + JSDoc, no build step. Works with the pairing `@tobedone4byme/dsh-web-search-governor`, whose `providerOverrides.tavily.snippetMaxChars: 800` keeps Tavily's richer passages while still capping them.
+Plain ESM JavaScript + JSDoc, no build step. Works with the pairing `@baoson/dsh-web-search-governor`, whose `providerOverrides.tavily.snippetMaxChars: 800` keeps Tavily's richer passages while still capping them.

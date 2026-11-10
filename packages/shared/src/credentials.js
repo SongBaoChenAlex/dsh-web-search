@@ -5,7 +5,7 @@
  * Host packages are resolved via importHost (plugins live outside the DSH
  * installation); when unavailable (unit tests) resolution falls back to a
  * literal key or `process.env`.
- * @module @tobedone4byme/dsh-web-shared/credentials
+ * @module @baoson/dsh-web-shared/credentials
  */
 
 import { importHost } from "./host.js";

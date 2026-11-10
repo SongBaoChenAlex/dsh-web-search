@@ -1,11 +1,11 @@
-# @tobedone4byme/dsh-web-fetch-readability bundle patch.
+# @baoson/dsh-web-fetch-readability bundle patch.
 # Registers the Readability fetch provider (id "readability-http") for the
 # `web_fetch` tool. Override the `web-fetch-readability` row's config in your
 # profile's cordis.patch.yml (or the `web-fetch-readability:` section of
 # ~/.dsh/settings.yaml, hot-reloaded) to tune limits.
 - insert:
     - id: web-fetch-readability
-      name: '@tobedone4byme/dsh-web-fetch-readability'
+      name: '@baoson/dsh-web-fetch-readability'
       config: {}
 
 # Point the web seam's fetch selection at this provider. Stock DSH ships no

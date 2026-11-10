@@ -1,4 +1,4 @@
-# @tobedone4byme/dsh-web-search-demo-command
+# @baoson/dsh-web-search-demo-command
 
 A DeepSeek Harness slash command for presentations and debugging:
 
@@ -38,7 +38,7 @@ Then refresh the Web GUI; `/web-search-demo` appears in the `/` menu. Settings s
 | `previewChars` | `160` | inline preview length before eliding |
 | `showRawBody` | `true` | include the raw vendor body section |
 
-Remove after the talk with `dsh plugin --profile web remove @tobedone4byme/dsh-web-search-demo-command`; no other package depends on it.
+Remove after the talk with `dsh plugin --profile web remove @baoson/dsh-web-search-demo-command`; no other package depends on it.
 
 ## How it captures the wire
 

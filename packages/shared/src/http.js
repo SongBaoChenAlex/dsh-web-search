@@ -1,7 +1,7 @@
 /**
  * HTTP + abort helpers. `WebError` is imported lazily so this module also loads
  * in unit tests without the DSH runtime installed.
- * @module @tobedone4byme/dsh-web-shared/http
+ * @module @baoson/dsh-web-shared/http
  */
 
 import { importHost } from "./host.js";

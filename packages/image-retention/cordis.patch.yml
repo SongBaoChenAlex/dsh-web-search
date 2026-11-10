@@ -1,4 +1,4 @@
-# @tobedone4byme/dsh-image-retention bundle patch.
+# @baoson/dsh-image-retention bundle patch.
 # Mounts the image-retention filter once at profile level. It wraps the
 # host-level `llm/stream` waterfall, so every agent-loop request (main agent
 # and subagents) passes through it. Override `keepLast` in the profile's
@@ -7,6 +7,6 @@
 #     config: { keepLast: 1 }
 - insert:
     - id: image-retention
-      name: '@tobedone4byme/dsh-image-retention'
+      name: '@baoson/dsh-image-retention'
       config:
         keepLast: 1

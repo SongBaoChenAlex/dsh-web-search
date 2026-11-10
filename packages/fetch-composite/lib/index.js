@@ -12,11 +12,11 @@
  * Providers are resolved lazily at call time from `ctx.web.fetchProviders`, so
  * registration order between plugin rows does not matter.
  *
- * @module @tobedone4byme/dsh-web-fetch-composite
+ * @module @baoson/dsh-web-fetch-composite
  */
 import z from "@deepseek-ai/schemastery";
-import { bindHost, isAbortError, throwIfAborted, webError } from "@tobedone4byme/dsh-web-shared/http";
-import { liveConfig } from "@tobedone4byme/dsh-web-shared/settings";
+import { bindHost, isAbortError, throwIfAborted, webError } from "@baoson/dsh-web-shared/http";
+import { liveConfig } from "@baoson/dsh-web-shared/settings";
 
 /** Stable id this provider registers under (select it via the `web` row's `fetchProvider`). */
 export const COMPOSITE_FETCH_PROVIDER_ID = "composite";

@@ -4,7 +4,7 @@ import { NS, zh, en } from "./locales.js";
 
 export { NS, NAMESPACE };
 
-const PLUGIN_ID = "@tobedone4byme/dsh-web-search-governor";
+const PLUGIN_ID = "@baoson/dsh-web-search-governor";
 
 const css = `
 .${C}-section{width:100%;max-width:820px;color:var(--dsw-alias-label-primary);display:flex;flex-direction:column;gap:20px;font-size:13px;line-height:20px}

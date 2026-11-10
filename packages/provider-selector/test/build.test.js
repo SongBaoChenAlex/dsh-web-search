@@ -12,7 +12,7 @@ describe("client bundle", () => {
 			const text = readFileSync(outFile, "utf8");
 
 			expect(text.startsWith("window.__ModuleLoader__.load({")).toBe(true);
-			expect(text).toContain('id: "@tobedone4byme/dsh-web-provider-selector"');
+			expect(text).toContain('id: "@baoson/dsh-web-provider-selector"');
 			expect(text).toContain("factory: (require) =>");
 			expect(text.trimEnd().endsWith("});")).toBe(true);
 

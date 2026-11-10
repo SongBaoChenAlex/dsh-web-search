@@ -2,7 +2,7 @@
  * HTML → compact article HTML. Readability (over linkedom) when the page looks
  * like an article, otherwise a cleaned full page. Plus `capHtml` for the
  * output budget.
- * @module @tobedone4byme/dsh-web-fetch-readability/extract
+ * @module @baoson/dsh-web-fetch-readability/extract
  */
 import { Readability, isProbablyReaderable } from "@mozilla/readability";
 import { parseHTML } from "linkedom";

@@ -6,13 +6,13 @@ Seven independently installable DSH plugins live in this monorepo:
 
 | Package | Kind | What it does |
 | --- | --- | --- |
-| `@tobedone4byme/dsh-web-search-governor` | tool hooks (`tools/execute`, `tools/post-execute`) | Shapes `web_search` results (dedupe, trim, cap), caches repeated queries, flags rephrased near-duplicate queries, keeps a per-session token ledger and enforces a per-session search budget. Zero extra tokens. |
-| `@tobedone4byme/dsh-web-search-http` | search provider | Generic HTTP search provider with pluggable backends: **Tavily**, **Brave**, **Exa**, **Serper**, **Jina**, **SearXNG** (self-hosted, key-less). Registers under the backend name (`searchProvider: tavily`). |
-| `@tobedone4byme/dsh-web-fetch-readability` | fetch provider (`readability-http`) | Fills DSH's missing `web_fetch` provider. SSRF-safe downloader + Readability article extraction so the model gets the article, not the nav bar. Also extracts the text layer of PDFs (`pdfjs-dist`). |
-| `@tobedone4byme/dsh-web-tavily-tools` | fetch provider (`tavily-extract`) + tools `web_map`, `web_research` | Tavily's non-search endpoints: hosted extraction (JS-rendered pages, PDFs, anti-bot sites), site URL maps, and delegated multi-source research reports. One API key for all three. |
-| `@tobedone4byme/dsh-web-fetch-composite` | fetch provider (`composite`) | Chains other fetch providers: `readability-http → tavily-extract`. Falls back on a thrown error, a 403-class status, or thin text (< 400 visible chars), so the paid extractor is only used when the free one failed. **The default active fetch provider.** |
-| `@tobedone4byme/dsh-web-provider-selector` | host API + Web GUI settings page | "Web providers" settings section: see every registered search/fetch provider, switch the active one live (no restart), configure API keys, add a mainstream backend from a curated list. |
-| `@tobedone4byme/dsh-image-retention` | `llm/stream` hook | Sibling token-saver, not web-specific: keeps only the last N images per model request, replacing older ones with a text placeholder (session log and GUI history untouched). |
+| `@baoson/dsh-web-search-governor` | tool hooks (`tools/execute`, `tools/post-execute`) | Shapes `web_search` results (dedupe, trim, cap), caches repeated queries, flags rephrased near-duplicate queries, keeps a per-session token ledger and enforces a per-session search budget. Zero extra tokens. |
+| `@baoson/dsh-web-search-http` | search provider | Generic HTTP search provider with pluggable backends: **Tavily**, **Brave**, **Exa**, **Serper**, **Jina**, **SearXNG** (self-hosted, key-less). Registers under the backend name (`searchProvider: tavily`). |
+| `@baoson/dsh-web-fetch-readability` | fetch provider (`readability-http`) | Fills DSH's missing `web_fetch` provider. SSRF-safe downloader + Readability article extraction so the model gets the article, not the nav bar. Also extracts the text layer of PDFs (`pdfjs-dist`). |
+| `@baoson/dsh-web-tavily-tools` | fetch provider (`tavily-extract`) + tools `web_map`, `web_research` | Tavily's non-search endpoints: hosted extraction (JS-rendered pages, PDFs, anti-bot sites), site URL maps, and delegated multi-source research reports. One API key for all three. |
+| `@baoson/dsh-web-fetch-composite` | fetch provider (`composite`) | Chains other fetch providers: `readability-http → tavily-extract`. Falls back on a thrown error, a 403-class status, or thin text (< 400 visible chars), so the paid extractor is only used when the free one failed. **The default active fetch provider.** |
+| `@baoson/dsh-web-provider-selector` | host API + Web GUI settings page | "Web providers" settings section: see every registered search/fetch provider, switch the active one live (no restart), configure API keys, add a mainstream backend from a curated list. |
+| `@baoson/dsh-image-retention` | `llm/stream` hook | Sibling token-saver, not web-specific: keeps only the last N images per model request, replacing older ones with a text placeholder (session log and GUI history untouched). |
 
 They can be used together or on their own. The governor works with *any* search provider, including DSH's built-in one.
 
@@ -436,7 +436,7 @@ dsh plugin --profile web add ./packages/fetch-readability
 
 ### Option C — from a registry
 
-Not published yet. The packages are registry-ready (`@tobedone4byme/*`, `publishConfig.access: public`); once they are released, `dsh plugin --profile web add @tobedone4byme/dsh-web-search-governor` etc. will work without a clone.
+Not published yet. The packages are registry-ready (`@baoson/*`, `publishConfig.access: public`); once they are released, `dsh plugin --profile web add @baoson/dsh-web-search-governor` etc. will work without a clone.
 
 ### Mount the plugins
 
@@ -506,7 +506,7 @@ Refresh the DSH Web GUI and ask the model to:
 
 ## Configuration reference
 
-### `@tobedone4byme/dsh-web-search-governor`
+### `@baoson/dsh-web-search-governor`
 
 | Key | Default | Notes |
 | --- | --- | --- |
@@ -519,7 +519,7 @@ Refresh the DSH Web GUI and ask the model to:
 | `guidance` | `true` | Register the system-prompt section |
 | `providerOverrides` | `{ tavily: { snippetMaxChars: 800 } }` | Per-provider-id overrides of the caps above |
 
-### `@tobedone4byme/dsh-web-search-http`
+### `@baoson/dsh-web-search-http`
 
 | Key | Default | Notes |
 | --- | --- | --- |
@@ -538,7 +538,7 @@ Refresh the DSH Web GUI and ask the model to:
 
 To run two backends at once, mount the package twice with different `id`s and `backend`s; each registers its own provider id, and the selector (or `searchProvider`) picks between them.
 
-### `@tobedone4byme/dsh-web-fetch-readability`
+### `@baoson/dsh-web-fetch-readability`
 
 | Key | Default | Notes |
 | --- | --- | --- |

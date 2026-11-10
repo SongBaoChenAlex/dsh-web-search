@@ -7,10 +7,10 @@
  * `defineTool` comes from `@deepseek-ai/dsh-tools` and is resolved against the
  * DSH installation via `requireHost`; tests inject their own `defineTool`.
  *
- * @module @tobedone4byme/dsh-web-tavily-tools/map
+ * @module @baoson/dsh-web-tavily-tools/map
  */
 import { SessionBudget } from "./budget.js";
-import { requireHost } from "@tobedone4byme/dsh-web-shared/host";
+import { requireHost } from "@baoson/dsh-web-shared/host";
 
 export const WEB_MAP_TOOL_NAME = "web_map";
 export const WEB_MAP_SECTION_NAME = "tool:web_map";

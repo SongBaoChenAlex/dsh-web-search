@@ -70,7 +70,7 @@ describe("rowState / rowAction", () => {
 describe("mountSnippet", () => {
 	it("renders the composition row", () => {
 		expect(mountSnippet({ id: "exa", keyEnv: "EXA_API_KEY" })).toBe(
-			'- id: web-search-exa\n  name: "@tobedone4byme/dsh-web-search-http"\n  config: { backend: exa, apiKeyEnv: EXA_API_KEY }',
+			'- id: web-search-exa\n  name: "@baoson/dsh-web-search-http"\n  config: { backend: exa, apiKeyEnv: EXA_API_KEY }',
 		);
 	});
 	it("derives a key env when none is known", () => {

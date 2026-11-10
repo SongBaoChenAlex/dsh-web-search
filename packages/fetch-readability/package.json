@@ -1,5 +1,5 @@
 {
-  "name": "@tobedone4byme/dsh-web-fetch-readability",
+  "name": "@baoson/dsh-web-fetch-readability",
   "description": "DeepSeek Harness web_fetch provider (id: readability-http): SSRF-safe downloader with redirect re-validation, size/time limits, charset decoding and Mozilla Readability article extraction so the model gets the article, not the nav bar.",
   "version": "0.1.0",
   "license": "MIT",
@@ -31,7 +31,7 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@tobedone4byme/dsh-web-shared": "workspace:*",
+    "@baoson/dsh-web-shared": "workspace:*",
     "@deepseek-ai/schemastery": "^3.18.1",
     "@mozilla/readability": "^0.6.0",
     "linkedom": "^0.18.15",

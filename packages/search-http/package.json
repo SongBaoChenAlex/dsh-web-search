@@ -1,5 +1,5 @@
 {
-  "name": "@tobedone4byme/dsh-web-search-http",
+  "name": "@baoson/dsh-web-search-http",
   "version": "0.1.0",
   "description": "Generic HTTP web-search provider for the DeepSeek Harness web seam (ctx.web) with pluggable backends. Ships with Tavily (LLM-native search: answer + extracted passages); registers under the backend name so `searchProvider: tavily` selects it.",
   "license": "MIT",
@@ -37,7 +37,7 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@tobedone4byme/dsh-web-shared": "workspace:*",
+    "@baoson/dsh-web-shared": "workspace:*",
     "@deepseek-ai/schemastery": "^3.18.1"
   },
   "peerDependencies": {

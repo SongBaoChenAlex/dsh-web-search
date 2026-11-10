@@ -1,7 +1,7 @@
 /**
  * Plain-text report renderer for `/web-search-demo`. The UI shows command
  * output in a monospace <pre> block, so this is deliberately not Markdown.
- * @module @tobedone4byme/dsh-web-search-demo-command/report
+ * @module @baoson/dsh-web-search-demo-command/report
  */
 
 const W = 78;

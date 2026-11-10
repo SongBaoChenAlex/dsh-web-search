@@ -1,5 +1,5 @@
 {
-  "name": "@tobedone4byme/dsh-web-search-governor",
+  "name": "@baoson/dsh-web-search-governor",
   "description": "DeepSeek Harness plugin that shapes web_search results (dedupe, trim, cap), caches repeated queries and enforces a per-session search budget. Works with any search provider; adds zero tokens.",
   "version": "0.1.0",
   "license": "MIT",
@@ -43,7 +43,7 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@tobedone4byme/dsh-web-shared": "workspace:*",
+    "@baoson/dsh-web-shared": "workspace:*",
     "@deepseek-ai/schemastery": "^3.18.1"
   },
   "devDependencies": {

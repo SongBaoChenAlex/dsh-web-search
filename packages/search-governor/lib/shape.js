@@ -4,9 +4,9 @@
  * Input shape (from `@deepseek-ai/dsh-tool-web`):
  * `{ content?: string, sources: [{ url, title?, snippet?, publishedAt? }], truncated: boolean }`
  *
- * @module @tobedone4byme/dsh-web-search-governor/shape
+ * @module @baoson/dsh-web-search-governor/shape
  */
-import { cleanSnippet, cleanUrl, estimateTokens, truncate } from "@tobedone4byme/dsh-web-shared/text";
+import { cleanSnippet, cleanUrl, estimateTokens, truncate } from "@baoson/dsh-web-shared/text";
 
 /**
  * @typedef {object} ShapeCaps

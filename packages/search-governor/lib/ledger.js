@@ -1,6 +1,6 @@
 /**
  * Per-session token-accounting ledger, LRU-bounded on sessions.
- * @module @tobedone4byme/dsh-web-search-governor/ledger
+ * @module @baoson/dsh-web-search-governor/ledger
  */
 
 /**

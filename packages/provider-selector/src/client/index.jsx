@@ -4,7 +4,7 @@ import { NS, zh, en } from "./locales.js";
 
 export { NS };
 
-const PLUGIN_ID = "@tobedone4byme/dsh-web-provider-selector";
+const PLUGIN_ID = "@baoson/dsh-web-provider-selector";
 const REMOTE_SERVICE = "remote.webProviders";
 
 const css = `

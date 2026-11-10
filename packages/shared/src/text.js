@@ -1,6 +1,6 @@
 /**
  * Pure text / URL helpers. No I/O, no DSH imports — safe to unit test anywhere.
- * @module @tobedone4byme/dsh-web-shared/text
+ * @module @baoson/dsh-web-shared/text
  */
 
 /** Query parameters that only carry tracking state and never change page content. */

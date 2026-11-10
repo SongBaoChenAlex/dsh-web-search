@@ -6,7 +6,7 @@
  * re-applying the plugin. Plugins that read their config as plain values go
  * through {@link plainConfig} so the same code works for plain objects (tests,
  * older hosts) and reference-carrying configs alike.
- * @module @tobedone4byme/dsh-web-shared/volatile
+ * @module @baoson/dsh-web-shared/volatile
  */
 
 /** Same symbol `@deepseek-ai/cosmokit` brands its references with (shared across copies). */

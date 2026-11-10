@@ -1,4 +1,4 @@
-# @tobedone4byme/dsh-web-fetch-composite
+# @baoson/dsh-web-fetch-composite
 
 A `web_fetch` provider for the DeepSeek Harness web seam (`ctx.web`) that **chains other registered fetch providers**. Registers under id **`composite`**.
 
@@ -25,14 +25,14 @@ The bundled `cordis.patch.yml` inserts the row and points the seam at it:
 ```yaml
 - insert:
     - id: web-fetch-composite
-      name: '@tobedone4byme/dsh-web-fetch-composite'
+      name: '@baoson/dsh-web-fetch-composite'
       config: {}
 - id: web
   config:
     fetchProvider: composite
 ```
 
-The providers named in `chain` must be installed too (e.g. `@tobedone4byme/dsh-web-fetch-readability`, `@tobedone4byme/dsh-web-tavily-tools`); they are looked up lazily on every call, so row order does not matter.
+The providers named in `chain` must be installed too (e.g. `@baoson/dsh-web-fetch-readability`, `@baoson/dsh-web-tavily-tools`); they are looked up lazily on every call, so row order does not matter.
 
 ## Decision flow
 

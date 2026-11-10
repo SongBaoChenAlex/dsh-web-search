@@ -1,5 +1,5 @@
 window.__ModuleLoader__.load({
-	id: "@tobedone4byme/dsh-web-search-governor",
+	id: "@baoson/dsh-web-search-governor",
 	factory: (require) => {
 		var module = { exports: {} };
 		var exports = module.exports;
@@ -439,7 +439,7 @@ window.__ModuleLoader__.load({
 		};
 		
 		// src/client/index.jsx
-		var PLUGIN_ID = "@tobedone4byme/dsh-web-search-governor";
+		var PLUGIN_ID = "@baoson/dsh-web-search-governor";
 		var css = `
 		.${C}-section{width:100%;max-width:820px;color:var(--dsw-alias-label-primary);display:flex;flex-direction:column;gap:20px;font-size:13px;line-height:20px}
 		.${C}-section h2{margin:0;font-size:16px;line-height:24px;font-weight:600}

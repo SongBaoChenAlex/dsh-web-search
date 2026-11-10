@@ -8,11 +8,11 @@
  * HTML is returned as `kind:'html'`; the official `web_fetch` tool turns it
  * into Markdown.
  *
- * @module @tobedone4byme/dsh-web-fetch-readability
+ * @module @baoson/dsh-web-fetch-readability
  */
 import z from "@deepseek-ai/schemastery";
-import { isAbortError, webError, bindHost } from "@tobedone4byme/dsh-web-shared/http";
-import { liveConfig } from "@tobedone4byme/dsh-web-shared/settings";
+import { isAbortError, webError, bindHost } from "@baoson/dsh-web-shared/http";
+import { liveConfig } from "@baoson/dsh-web-shared/settings";
 import { decodeBody } from "./decode.js";
 import { download, RedirectError } from "./download.js";
 import { capHtml, capText, extractArticle } from "./extract.js";

@@ -1,5 +1,5 @@
 {
-  "name": "@tobedone4byme/dsh-web-fetch-composite",
+  "name": "@baoson/dsh-web-fetch-composite",
   "description": "DeepSeek Harness web_fetch provider (id: composite): chains other registered fetch providers — try the primary (e.g. readability-http), fall back to the next (e.g. tavily-extract) when the result is thin, errors, or returns a blocked status.",
   "version": "0.1.0",
   "license": "MIT",
@@ -24,7 +24,7 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@tobedone4byme/dsh-web-shared": "workspace:*",
+    "@baoson/dsh-web-shared": "workspace:*",
     "@deepseek-ai/schemastery": "^3.18.1"
   },
   "peerDependencies": {

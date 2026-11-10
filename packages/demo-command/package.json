@@ -1,5 +1,5 @@
 {
-  "name": "@tobedone4byme/dsh-web-search-demo-command",
+  "name": "@baoson/dsh-web-search-demo-command",
   "version": "0.1.0",
   "description": "DeepSeek Harness slash command `/web-search-demo [query]`: runs one real search through ctx.web and renders every pipeline stage (provider selection, wire request, raw body, parsed result, governor shaping, session record, ledger) with the source location of each step. Presentation / debugging aid; adds zero model tokens.",
   "license": "MIT",
@@ -32,8 +32,8 @@
     }
   },
   "dependencies": {
-    "@tobedone4byme/dsh-web-search-governor": "workspace:*",
-    "@tobedone4byme/dsh-web-shared": "workspace:*",
+    "@baoson/dsh-web-search-governor": "workspace:*",
+    "@baoson/dsh-web-shared": "workspace:*",
     "@deepseek-ai/schemastery": "^3.18.1"
   },
   "peerDependencies": {

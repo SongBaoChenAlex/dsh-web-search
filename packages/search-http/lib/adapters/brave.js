@@ -6,9 +6,9 @@
  * short `description` snippet only, so the model will usually follow up with
  * `web_fetch`. Free tier: 2 000 queries/month, 1 request/second.
  *
- * @module @tobedone4byme/dsh-web-search-http/adapters/brave
+ * @module @baoson/dsh-web-search-http/adapters/brave
  */
-import { cleanSnippet, dedupeBy } from "@tobedone4byme/dsh-web-shared/text";
+import { cleanSnippet, dedupeBy } from "@baoson/dsh-web-shared/text";
 
 export const BRAVE_ID = "brave";
 export const BRAVE_DEFAULT_BASE_URL = "https://api.search.brave.com/res/v1";

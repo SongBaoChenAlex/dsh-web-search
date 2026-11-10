@@ -2,7 +2,7 @@
  * `tavily-extract` — a `web_fetch` provider for the DeepSeek Harness web seam
  * backed by Tavily's `/extract` endpoint.
  *
- * Compared with `readability-http` (`@tobedone4byme/dsh-web-fetch-readability`):
+ * Compared with `readability-http` (`@baoson/dsh-web-fetch-readability`):
  * - Tavily renders JavaScript-heavy pages, reads PDFs and gets past many
  *   anti-bot front doors that a plain HTTP GET cannot.
  * - It **sends the URL to a third party** (Tavily) and **costs credits**
@@ -17,9 +17,9 @@
  * Tavily reports in `failed_results` becomes a `statusCode: 502` *result*,
  * not a thrown error, so the model can reason about it.
  *
- * @module @tobedone4byme/dsh-web-tavily-tools/extract
+ * @module @baoson/dsh-web-tavily-tools/extract
  */
-import { webError } from "@tobedone4byme/dsh-web-shared/http";
+import { webError } from "@baoson/dsh-web-shared/http";
 
 /** Stable id this provider registers under (select it via the `web` row's `fetchProvider`). */
 export const TAVILY_EXTRACT_PROVIDER_ID = "tavily-extract";

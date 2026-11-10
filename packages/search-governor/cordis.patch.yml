@@ -1,9 +1,9 @@
-# @tobedone4byme/dsh-web-search-governor bundle patch.
+# @baoson/dsh-web-search-governor bundle patch.
 # Mounts the governor once at profile level. It hooks the host-level `tools`
 # registry, so it sees web_search calls from every agent preset. Override the
 # row's config in the profile's cordis.patch.yml (or the `web-search-governor`
 # section of ~/.dsh/settings.yaml for live changes).
 - insert:
     - id: web-search-governor
-      name: '@tobedone4byme/dsh-web-search-governor'
+      name: '@baoson/dsh-web-search-governor'
       config: {}

@@ -1,7 +1,7 @@
 /**
  * PDF → plain text via pdf.js (`pdfjs-dist`, legacy Node build). The library
  * is imported lazily so startup stays cheap for the common HTML path.
- * @module @tobedone4byme/dsh-web-fetch-readability/pdf
+ * @module @baoson/dsh-web-fetch-readability/pdf
  */
 
 /** @type {Promise<typeof import('pdfjs-dist')> | undefined} */
