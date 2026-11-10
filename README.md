@@ -16,10 +16,28 @@ Seven independently installable DSH plugins live in this monorepo:
 
 They can be used together or on their own. The governor works with *any* search provider, including DSH's built-in one.
 
+## Quick start
+
+Requires Node ≥ 22, [pnpm](https://pnpm.io/installation) and `dsh` on your PATH (`npm i -g @deepseek-ai/dsh`).
+
+```powershell
+git clone https://github.com/SongBaoChenAlex/dsh-web-search
+cd dsh-web-search
+pwsh scripts/install-dsh.ps1        # Windows
+bash scripts/install-dsh.sh         # macOS / Linux
+```
+
+The script runs `pnpm install` and mounts the recommended set (governor, search-http, fetch-readability, tavily-tools, fetch-composite, provider-selector) into the `web` profile. Then restart DSH and enter your search API key under **Settings → Web providers** in the Web GUI.
+
+- `-All` / `--all` installs every package; `-Profile cli` / `--profile cli` targets another profile.
+- Update later with `git pull && pnpm install` — plugins are path-linked, nothing to re-add.
+- Full options and manual install: see [Installation](#installation).
+
 ---
 
 ## Table of contents
 
+0. [Quick start](#quick-start)
 1. [Why this exists](#why-this-exists)
 2. [How it runs — the request path](#how-it-runs--the-request-path)
 3. [Search providers: a taxonomy](#search-providers-a-taxonomy)
