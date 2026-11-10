@@ -1,0 +1,24 @@
+# @baoson/dsh-web-search-http bundle patch.
+# Registers the generic HTTP search provider with the Tavily backend. The
+# provider id equals the backend name, so this row registers `tavily`.
+# Override this row's config in the profile's cordis.patch.yml to change the
+# key reference, endpoint, result count, or Tavily request options.
+- insert:
+    - id: web-search-tavily
+      name: '@baoson/dsh-web-search-http'
+      config:
+        backend: tavily
+        apiKeyEnv: TAVILY_API_KEY
+
+# NOTE: this bundle deliberately does NOT touch the `web` row's `searchProvider`.
+# The base composition pins `deepseek-official`; once this plugin is mounted two
+# usable search providers exist and the seam raises WEB_PROVIDER_AMBIGUOUS
+# unless one is selected. Pick the provider in YOUR profile patch
+# (~/.dsh/profiles/<profile>/cordis.patch.yml):
+#
+#   - id: web
+#     config:
+#       searchProvider: tavily
+#
+# Leaving the choice to the profile lets you flip back to the official provider
+# (or to another backend) without editing this package.

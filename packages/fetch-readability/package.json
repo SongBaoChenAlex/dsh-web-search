@@ -1,0 +1,50 @@
+{
+  "name": "@baoson/dsh-web-fetch-readability",
+  "description": "DeepSeek Harness web_fetch provider (id: readability-http): SSRF-safe downloader with redirect re-validation, size/time limits, charset decoding and Mozilla Readability article extraction so the model gets the article, not the nav bar.",
+  "version": "0.1.0",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./ssrf": "./lib/ssrf.js",
+    "./download": "./lib/download.js",
+    "./decode": "./lib/decode.js",
+    "./extract": "./lib/extract.js",
+    "./pdf": "./lib/pdf.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "README.md",
+    "cordis.patch.yml",
+    "lib/*.js"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@baoson/dsh-web-shared": "workspace:*",
+    "@deepseek-ai/schemastery": "^3.18.1",
+    "@mozilla/readability": "^0.6.0",
+    "linkedom": "^0.18.15",
+    "pdfjs-dist": "^6.5.438"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-settings": "^0.1.0-rc.7 || ^0.2.0-rc.1",
+    "@deepseek-ai/dsh-web": "^0.1.0-rc.7 || ^0.2.0-rc.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

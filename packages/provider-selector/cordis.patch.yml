@@ -1,0 +1,13 @@
+# @baoson/dsh-web-provider-selector bundle patch.
+# Mounts the host half (settings persistence + `webProviders` remote) and,
+# because the package declares `dsh.client`, makes the Web GUI serve its
+# browser bundle as a "Web providers" settings section.
+#
+# Leave `config` empty to keep whatever the `web` row / settings.yaml say; set
+# `searchProvider` / `fetchProvider` here to seed the selection (the user's
+# choice in the GUI is stored in ~/.dsh/settings.yaml under
+# `web-provider-selector:` and wins over this base layer).
+- insert:
+    - id: web-provider-selector
+      name: '@baoson/dsh-web-provider-selector'
+      config: {}

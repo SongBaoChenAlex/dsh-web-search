@@ -1,0 +1,68 @@
+{
+  "name": "@baoson/dsh-web-provider-selector",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness Web GUI settings section \"Web providers\": lists every registered web search / fetch provider, switches the active one live (persisted in settings.yaml), and stores API keys for curated search backends through the DSH credentials store.",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./service": "./lib/service.js",
+    "./remote": "./lib/typert.remote-client.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "README.md",
+    "cordis.patch.yml",
+    "lib/*.js"
+  ],
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "cordis",
+    "web-search",
+    "settings-ui"
+  ],
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-api-remotes",
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "build:client": "node scripts/build-client.mjs",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@baoson/dsh-web-search-http": "workspace:*",
+    "@baoson/dsh-web-shared": "workspace:*",
+    "@deepseek-ai/schemastery": "^3.18.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-credentials": "^0.1.0-rc.7 || ^0.2.0-rc.1",
+    "@deepseek-ai/dsh-settings": "^0.1.0-rc.7 || ^0.2.0-rc.1",
+    "@deepseek-ai/dsh-typert-protocol": "^0.1.0-rc.7 || ^0.2.0-rc.1",
+    "@deepseek-ai/dsh-web": "^0.1.0-rc.7 || ^0.2.0-rc.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

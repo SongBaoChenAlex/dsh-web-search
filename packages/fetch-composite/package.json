@@ -1,0 +1,40 @@
+{
+  "name": "@baoson/dsh-web-fetch-composite",
+  "description": "DeepSeek Harness web_fetch provider (id: composite): chains other registered fetch providers — try the primary (e.g. readability-http), fall back to the next (e.g. tavily-extract) when the result is thin, errors, or returns a blocked status.",
+  "version": "0.1.0",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "README.md",
+    "cordis.patch.yml",
+    "lib/*.js"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@baoson/dsh-web-shared": "workspace:*",
+    "@deepseek-ai/schemastery": "^3.18.1"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-settings": "^0.1.0-rc.7 || ^0.2.0-rc.1",
+    "@deepseek-ai/dsh-web": "^0.1.0-rc.7 || ^0.2.0-rc.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

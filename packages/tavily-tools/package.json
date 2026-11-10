@@ -1,0 +1,59 @@
+{
+  "name": "@baoson/dsh-web-tavily-tools",
+  "version": "0.1.0",
+  "description": "Tavily Extract and Map for the DeepSeek Harness: a `tavily-extract` web_fetch provider (JS-rendered pages, PDFs, anti-bot sites) and a `web_map` tool that lists a site's URLs so the model can pick the right page before fetching.",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./extract": "./lib/extract.js",
+    "./map": "./lib/map.js",
+    "./client-api": "./lib/client-api.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "cordis.patch.yml",
+    "lib/"
+  ],
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "cordis",
+    "web-fetch",
+    "tavily",
+    "extract",
+    "sitemap"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@baoson/dsh-web-shared": "workspace:*",
+    "@deepseek-ai/schemastery": "^3.18.1"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-credentials": "^0.1.0-rc.7 || ^0.2.0-rc.1",
+    "@deepseek-ai/dsh-launch-environment": "^0.1.0-rc.7 || ^0.2.0-rc.1",
+    "@deepseek-ai/dsh-settings": "^0.1.0-rc.7 || ^0.2.0-rc.1",
+    "@deepseek-ai/dsh-system-prompt": "^0.1.0-rc.7 || ^0.2.0-rc.1",
+    "@deepseek-ai/dsh-tools": "^0.1.0-rc.7 || ^0.2.0-rc.1",
+    "@deepseek-ai/dsh-web": "^0.1.0-rc.7 || ^0.2.0-rc.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

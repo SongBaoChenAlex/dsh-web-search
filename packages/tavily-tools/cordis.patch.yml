@@ -1,0 +1,24 @@
+# @baoson/dsh-web-tavily-tools bundle patch.
+# Mounts one row that (a) registers the `tavily-extract` web_fetch provider
+# and (b) registers the `web_map` tool. Both share the TAVILY_API_KEY credential
+# already used by the Tavily search backend. Override this row's config in the
+# profile's cordis.patch.yml to change the key reference, extract depth, output
+# cap or the web_map per-session budget.
+- insert:
+    - id: web-tavily-tools
+      name: '@baoson/dsh-web-tavily-tools'
+      config:
+        apiKeyEnv: TAVILY_API_KEY
+
+# NOTE: this bundle deliberately does NOT touch the `web` row's `fetchProvider`.
+# `readability-http` (from @baoson/dsh-web-fetch-readability) stays the active
+# web_fetch backend; `tavily-extract` is merely *registered*. Switch in YOUR
+# profile patch (~/.dsh/profiles/<profile>/cordis.patch.yml) or in the
+# "Web providers" settings page:
+#
+#   - id: web
+#     config:
+#       fetchProvider: tavily-extract
+#
+# Tavily Extract costs credits and sends every fetched URL to Tavily, so the
+# choice is left to the profile instead of being made by this package.

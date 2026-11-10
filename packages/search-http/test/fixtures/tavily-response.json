@@ -1,0 +1,34 @@
+{
+  "query": "deepseek harness",
+  "answer": "DeepSeek Harness (DSH) is a plugin-based agent runtime built on cordis.",
+  "response_time": 1.23,
+  "results": [
+    {
+      "title": "DeepSeek Harness — <b>docs</b>",
+      "url": "https://example.com/dsh",
+      "content": "DSH is a harness &amp; toolkit.\n\n  It wires   plugins via <strong>cordis</strong>.",
+      "score": 0.98,
+      "raw_content": null,
+      "published_date": "2025-01-15T10:00:00Z"
+    },
+    {
+      "title": "Duplicate",
+      "url": "https://example.com/dsh",
+      "content": "same url again",
+      "score": 0.5
+    },
+    {
+      "title": "No url",
+      "url": "",
+      "content": "dropped",
+      "score": 0.4
+    },
+    {
+      "title": "Other",
+      "url": "https://example.org/other",
+      "content": "",
+      "score": 0.3,
+      "published_date": ""
+    }
+  ]
+}

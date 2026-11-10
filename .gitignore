@@ -1,0 +1,12 @@
+node_modules/
+*.log
+.vitest/
+coverage/
+.trace/
+
+# local-only
+.pnpm-store/
+projects/
+plan.md
+*.local.*
+.env*

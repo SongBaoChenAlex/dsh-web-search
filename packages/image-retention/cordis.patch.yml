@@ -1,0 +1,12 @@
+# @baoson/dsh-image-retention bundle patch.
+# Mounts the image-retention filter once at profile level. It wraps the
+# host-level `llm/stream` waterfall, so every agent-loop request (main agent
+# and subagents) passes through it. Override `keepLast` in the profile's
+# cordis.patch.yml:
+#   - id: image-retention
+#     config: { keepLast: 1 }
+- insert:
+    - id: image-retention
+      name: '@baoson/dsh-image-retention'
+      config:
+        keepLast: 1
